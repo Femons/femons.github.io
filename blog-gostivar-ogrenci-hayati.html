@@ -1,99 +1,136 @@
-<!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Gostivar’da Öğrenci Hayatı | Femons</title><meta name="description" content="Femons Yurtdışı Eğitim"><style>
-    /* === NAV CSS === */
-    nav{background:#001621;position:sticky;top:0;z-index:1000;box-shadow:0 2px 16px rgba(0,0,0,.35);border-bottom:1px solid rgba(255,255,255,.06);}
-    .nav-inner{max-width:1200px;margin:0 auto;padding:0 32px;height:68px;display:flex;align-items:center;gap:0;}
-    .logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:40px;flex-shrink:0;}
-    .logo-icon{width:38px;height:38px;background:#FF4103;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:17px;}
-    .logo-text{color:#fff;font-weight:800;font-size:17px;letter-spacing:-.3px;}
-    .logo-text span{color:#FF4103;}
-    .nav-links{display:flex;align-items:center;gap:2px;list-style:none;flex:1;}
-    .nav-links a{color:rgba(255,255,255,.65);text-decoration:none;font-size:14px;font-weight:500;padding:7px 13px;border-radius:7px;transition:color .18s,background .18s;white-space:nowrap;}
-    .nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.09);}
-    .nav-cta{background:#FF4103!important;color:#fff!important;font-weight:700!important;padding:9px 20px!important;border-radius:8px!important;margin-left:8px!important;}
-    .nav-cta:hover{background:#e03800!important;}
-    .nav-phone{color:rgba(255,255,255,.5);font-size:13px;text-decoration:none;margin-left:20px;white-space:nowrap;flex-shrink:0;}
-    .nav-phone:hover{color:#fff;}
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;margin-left:12px;}
-    .hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:all .3s;}
-    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-    .hamburger.open span:nth-child(2){opacity:0;}
-    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-    .mobile-nav{display:none;position:fixed;top:68px;left:0;right:0;bottom:0;background:#001621;z-index:999;padding:24px 20px;flex-direction:column;gap:4px;overflow-y:auto;}
-    .mobile-nav.open{display:flex;}
-    .mobile-nav a{color:rgba(255,255,255,.8);text-decoration:none;font-size:17px;font-weight:600;padding:14px 18px;border-radius:10px;border-bottom:1px solid rgba(255,255,255,.05);transition:background .2s;}
-    .mobile-nav a:hover{color:#fff;background:rgba(255,65,3,.15);}
-    .mobile-nav .mob-cta{background:#FF4103!important;color:#fff!important;text-align:center;margin-top:12px;border-radius:10px!important;border-bottom:none!important;}
-    @media(max-width:960px){.nav-links{display:none!important;}.nav-phone{display:none!important;}.hamburger{display:flex!important;}.nav-inner{padding:0 20px!important;}}
-    /* === / NAV CSS === */
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gostivar’da Öğrenci Hayatı | Femons Education</title>
+<meta name="description" content="Gostivar’da Öğrenci Hayatı">
+<style>
+:root{
+  --dark:#001621;
+  --dark2:#00243A;
+  --orange:#FF4103;
+  --white:#ffffff;
+  --soft:#f4f6f8;
+  --line:#e6edf2;
+  --text:#001621;
+  --muted:#667789;
+}
 
-  :root{--orange:#FF4103;--dark:#001621;--dark2:#00243a;--white:#fff;--gray-light:#f4f6f8;--gray-mid:#e2e8ed;--gray-text:#6b7a8a;--font:'Segoe UI',system-ui,sans-serif;}
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:var(--font);background:var(--gray-light);color:var(--dark);font-size:15px;line-height:1.6;}
-  nav{background:var(--dark);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.3);}
-  .nav-inner{max-width:1160px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
-  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
-  .logo-icon{width:36px;height:36px;background:var(--orange);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:16px;}
-  .logo-text{color:#fff;font-weight:700;font-size:17px;}.logo-text span{color:var(--orange);}
-  .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
-  .nav-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:14px;font-weight:500;padding:6px 12px;border-radius:6px;transition:color .2s,background .2s;}
-  .nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.08);}
-  .nav-cta{background:var(--orange)!important;color:#fff!important;font-weight:600!important;padding:8px 18px!important;border-radius:8px!important;}
-  .nav-phone{color:rgba(255,255,255,.6);font-size:13px;text-decoration:none;}
-  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
-  .hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:all .3s;}
-  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-  .hamburger.open span:nth-child(2){opacity:0;}
-  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-  .mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--dark);z-index:99;padding:24px;flex-direction:column;gap:8px;}
-  .mobile-nav.open{display:flex;}
-  .mobile-nav a{color:rgba(255,255,255,.8);text-decoration:none;font-size:18px;font-weight:600;padding:14px 16px;border-radius:10px;border-bottom:1px solid rgba(255,255,255,.06);}
-  .mobile-nav a:hover{color:#fff;background:rgba(255,65,3,.15);}
-  .mobile-nav .mob-cta{background:var(--orange);color:#fff!important;text-align:center;margin-top:8px;border-radius:10px!important;border-bottom:none!important;}
-  @media(max-width:900px){.nav-links{display:none;}.hamburger{display:flex;}.nav-phone{display:none;}}
-  .breadcrumb{background:#fff;padding:12px 24px;border-bottom:1px solid var(--gray-mid);}
-  .breadcrumb-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:6px;font-size:13px;color:var(--gray-text);}
-  .breadcrumb a{color:var(--gray-text);text-decoration:none;}.breadcrumb a:hover{color:var(--orange);}
-  .breadcrumb span{color:var(--orange);}
-  .article-wrap{max-width:860px;margin:0 auto;padding:40px 24px 72px;display:grid;grid-template-columns:1fr 280px;gap:40px;align-items:start;}
-  .article header{margin-bottom:28px;}
-  .article-cat{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;padding:4px 14px;border-radius:20px;margin-bottom:14px;}
-  .cat-rehber{background:rgba(255,65,3,.1);color:var(--orange);}
-  .cat-yasam{background:#e8f5e9;color:#2e7d32;}
-  .cat-karsilastirma{background:#e3f2fd;color:#0277bd;}
-  .cat-bolum{background:#f3e5f5;color:#7b1fa2;}
-  .article h1{font-size:clamp(22px,3vw,34px);font-weight:900;line-height:1.2;margin-bottom:12px;}
-  .article-meta{display:flex;align-items:center;gap:14px;color:var(--gray-text);font-size:13px;margin-bottom:20px;}
-  .article-lead{font-size:16px;color:var(--gray-text);line-height:1.8;padding:20px 24px;background:#fff;border-left:4px solid var(--orange);border-radius:0 10px 10px 0;margin-bottom:28px;}
-  .article-body{background:#fff;border-radius:14px;padding:32px;border:1px solid var(--gray-mid);}
-  .article-body h2{font-size:20px;font-weight:800;margin:28px 0 12px;color:var(--dark);}
-  .article-body h2:first-child{margin-top:0;}
-  .article-body h3{font-size:17px;font-weight:700;margin:20px 0 8px;color:var(--dark);}
-  .article-body p{font-size:15px;color:var(--gray-text);line-height:1.8;margin-bottom:14px;}
-  .article-body ul,.article-body ol{margin:10px 0 14px 20px;display:flex;flex-direction:column;gap:6px;}
-  .article-body li{font-size:14px;color:var(--gray-text);line-height:1.7;}
-  .article-body strong{color:var(--dark);}
-  .info-box{background:var(--gray-light);border:1px solid var(--gray-mid);border-radius:10px;padding:18px 20px;margin:20px 0;}
-  .info-box p{margin-bottom:0;font-size:14px;}
-  .warn-box{background:#fff8e1;border:1px solid #ffe082;border-radius:10px;padding:18px 20px;margin:20px 0;}
-  .warn-box p{margin-bottom:0;font-size:14px;color:#5d4037;}
-  .article-cta{background:var(--dark);border-radius:12px;padding:24px;margin-top:28px;text-align:center;}
-  .article-cta h3{color:#fff;font-size:17px;font-weight:800;margin-bottom:8px;}
-  .article-cta p{color:rgba(255,255,255,.6);font-size:13px;margin-bottom:16px;}
-  .btn-orange{background:var(--orange);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:11px 24px;border-radius:8px;display:inline-block;margin-right:8px;}
-  .btn-wa{background:#25D366;color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:11px 18px;border-radius:8px;display:inline-flex;align-items:center;gap:6px;}
-  .sidebar{position:sticky;top:84px;display:flex;flex-direction:column;gap:16px;}
-  .sidebar-card{background:#fff;border:1px solid var(--gray-mid);border-radius:12px;padding:20px;}
-  .sidebar-card h3{font-size:14px;font-weight:800;margin-bottom:12px;}
-  .sidebar-links{display:flex;flex-direction:column;gap:6px;}
-  .sidebar-links a{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:8px;background:var(--gray-light);text-decoration:none;color:var(--dark);font-size:13px;transition:background .2s,color .2s;}
-  .sidebar-links a:hover{background:rgba(255,65,3,.1);color:var(--orange);}
-  .cta-side{background:var(--dark);border-radius:12px;padding:20px;}
-  .cta-side h3{color:#fff;font-size:14px;font-weight:800;margin-bottom:6px;}
-  .cta-side p{color:rgba(255,255,255,.6);font-size:12px;margin-bottom:14px;}
-  .cta-side .btn-orange{display:block;text-align:center;margin-bottom:8px;margin-right:0;}
-  .wa-small{display:flex;align-items:center;justify-content:center;gap:6px;background:#25D366;color:#fff;text-decoration:none;font-weight:600;font-size:12px;padding:9px;border-radius:8px;}
-  footer{background:var(--dark);color:rgba(255,255,255,.55);padding:40px 24px 24px;}
-  .footer-bottom{max-width:1160px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;}
-  @media(max-width:760px){.article-wrap{grid-template-columns:1fr;}.sidebar{position:static;}}
-</style></head><body>
-<nav><div class="nav-inner"><a class="logo" href="index.html"><div class="logo-icon">F</div><div class="logo-text">Femons <span>Education</span></div></a><ul class="nav-links"><li><a class="" href="index.html">Ana Sayfa</a></li><li><a class="" href="femons_neden_makedonya.html">Neden Makedonya?</a></li><li><a class="" href="femons_programlar.html">Programlar</a></li><li><a class="" href="femons_basvuru_sureci.html">Başvuru Süreci</a></li><li><a class="" href="blog.html">Blog</a></li><li><a class="" href="femons_hakkimizda.html">Hakkımızda</a></li><li><a class="nav-cta" href="femons_iletisim.html">Ücretsiz Danışmanlık</a></li></ul><a class="nav-phone" href="tel:+905555555555">+90 555 555 55 55</a><button class="hamburger" aria-label="Menü" onclick="toggleMenu()"><span></span><span></span><span></span></button></div></nav><div class="mobile-nav" id="mobileNav"><a href="index.html">Ana Sayfa</a><a href="femons_neden_makedonya.html">Neden Makedonya?</a><a href="femons_programlar.html">Programlar</a><a href="femons_basvuru_sureci.html">Başvuru Süreci</a><a href="blog.html">Blog</a><a href="femons_hakkimizda.html">Hakkımızda</a><a href="femons_iletisim.html">İletişim</a><a class="mob-cta" href="femons_iletisim.html">Başvuru Yap</a></div><article class="section"><div class="section-inner"><div class="section-head"><div class="section-eyebrow">Femons Blog</div><h1 class="section-title">Gostivar’da Öğrenci Hayatı</h1><p>Makedonya’da üniversite okumayı düşünen öğrenciler için pratik ve anlaşılır rehber.</p></div><div class="why-card"><p>Bu yazıda gostivar’da öğrenci hayatı konusunu sade şekilde ele alıyoruz. Üniversite seçimi, başvuru süreci, öğrenci yaşamı ve mezuniyet sonrası planlama öğrencinin hedeflerine göre birlikte değerlendirilmelidir.</p><p>Makedonya’da eğitim planlayan öğrenciler için en doğru yol; bölüm, şehir, üniversite koşulları ve denklik sürecini baştan netleştirmektir. Femons ekibi bu süreçte öğrencinin ihtiyacına göre yönlendirme yapar.</p><p>Detaylı bilgi almak ve size uygun seçenekleri öğrenmek için danışmanlık formu üzerinden bizimle iletişime geçebilirsiniz.</p><p><a class="btn-primary" href="femons_iletisim.html">Ücretsiz Bilgi Al</a></p></div></div></article><footer class="section-dark"><div class="section-inner footer-inner"><div class="footer-col"><div class="footer-logo">Femons Education</div><p>Makedonya’da üniversite eğitimi için başvuru, danışmanlık ve öğrenci yerleşim süreci.</p></div><div class="footer-col"><h4>Sayfalar</h4><p><a href="femons_programlar.html">Programlar</a></p><p><a href="femons_basvuru_sureci.html">Başvuru Süreci</a></p><p><a href="blog.html">Blog</a></p></div><div class="footer-col"><h4>İletişim</h4><p>İstanbul / Türkiye</p><p>info@femons.com.tr</p><p>www.femons.com.tr</p></div></div><div class="footer-bottom">© 2026 Femons Yurtdışı Eğitim</div></footer><a class="wa-float" href="https://wa.me/905555555555">WhatsApp</a><script>function toggleMenu(){document.getElementById('mobileNav').classList.toggle('open');document.querySelector('.hamburger').classList.toggle('open')}</script></body></html>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:1000;background:rgba(0,22,33,.98);box-shadow:0 2px 18px rgba(0,0,0,.28)}
+.nav-inner{height:74px;display:flex;align-items:center;gap:18px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:900;margin-right:auto}
+.logo-mark{width:40px;height:40px;background:var(--orange);border-radius:11px;display:grid;place-items:center;font-weight:900}
+.logo span{color:var(--orange)}
+.menu{display:flex;align-items:center;gap:4px}
+.menu a{color:rgba(255,255,255,.72);font-size:14px;font-weight:650;padding:9px 11px;border-radius:9px}
+.menu a:hover,.menu a.active{background:rgba(255,255,255,.1);color:#fff}
+.menu .cta-mini{background:var(--orange);color:#fff;margin-left:6px}
+.hero{background:radial-gradient(circle at 75% 22%,rgba(255,65,3,.25),transparent 26%),linear-gradient(135deg,var(--dark),var(--dark2) 55%,var(--dark));color:#fff}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:54px;align-items:center;padding:86px 0 74px}
+.kicker{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,65,3,.38);background:rgba(255,65,3,.12);color:#ffb69c;border-radius:999px;padding:8px 14px;font-size:12px;font-weight:900;letter-spacing:1px;margin-bottom:18px}
+h1{font-size:58px;line-height:1.03;letter-spacing:-2.2px;max-width:760px}
+.hero p{font-size:19px;color:rgba(255,255,255,.78);max-width:640px;margin:22px 0 28px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:11px;font-weight:900}
+.btn-orange{background:var(--orange);color:#fff;box-shadow:0 14px 34px rgba(255,65,3,.28)}
+.btn-outline{border:1px solid rgba(255,255,255,.32);color:#fff;background:rgba(255,255,255,.06)}
+.stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:34px}
+.stat b{display:block;font-size:32px;color:#fff;line-height:1}.stat span{font-size:13px;color:rgba(255,255,255,.65)}
+.hero-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:26px;padding:30px;box-shadow:0 30px 80px rgba(0,0,0,.25);backdrop-filter:blur(12px)}
+.hero-card h2{font-size:26px;margin-bottom:12px}
+.checks{display:grid;gap:13px;margin:22px 0}
+.check{display:flex;gap:10px;color:rgba(255,255,255,.86)}
+.check:before{content:"✓";width:23px;height:23px;border-radius:50%;background:var(--orange);display:grid;place-items:center;flex:0 0 23px;font-size:13px}
+.section{padding:72px 0}
+.section.alt{background:var(--soft)}
+.section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:30px}
+.section h2{font-size:40px;line-height:1.12;letter-spacing:-1.2px}
+.section .lead{color:var(--muted);font-size:17px;max-width:720px;margin-top:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:0 16px 42px rgba(0,22,33,.06)}
+.card h3{font-size:21px;margin-bottom:9px}
+.card p{color:var(--muted)}
+.uni-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;min-height:150px;box-shadow:0 12px 32px rgba(0,22,33,.05);display:flex;flex-direction:column;justify-content:space-between}
+.uni-card b{font-size:18px}.uni-card span{color:var(--muted);font-size:14px;margin-top:8px;display:block}
+.uni-card a{color:var(--orange);font-weight:900;margin-top:16px;display:inline-block}
+.program{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;font-weight:900;box-shadow:0 10px 28px rgba(0,22,33,.045)}
+.program small{display:block;color:var(--muted);font-weight:600;margin-top:4px}
+.steps{counter-reset:step;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+.step:before{counter-increment:step;content:counter(step);width:34px;height:34px;border-radius:10px;background:var(--orange);color:#fff;font-weight:900;display:grid;place-items:center;margin-bottom:16px}
+.blog-list{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.blog-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 14px 38px rgba(0,22,33,.055)}
+.blog-card b{font-size:19px}.blog-card p{color:var(--muted);margin:10px 0 16px}.blog-card a{color:var(--orange);font-weight:900}
+.cta-band{background:linear-gradient(135deg,var(--dark),var(--dark2));border-radius:28px;color:#fff;padding:42px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.cta-band h2{font-size:34px}.cta-band p{color:rgba(255,255,255,.72);margin-top:8px}
+footer{background:var(--dark);color:rgba(255,255,255,.7);padding:38px 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255,.72)}
+@media(max-width:960px){
+  .menu{display:none}.hero-grid{grid-template-columns:1fr;padding:62px 0}.grid3,.grid4,.steps,.blog-list,.footer-grid{grid-template-columns:1fr 1fr}h1{font-size:42px}.section-head{display:block}
+}
+@media(max-width:600px){
+  .container{padding:0 18px}.grid3,.grid4,.steps,.blog-list,.footer-grid{grid-template-columns:1fr}.hero-grid{padding:48px 0}h1{font-size:34px}.hero p{font-size:17px}.section{padding:50px 0}.section h2{font-size:30px}.cta-band{display:block;padding:28px}.cta-band .btn{margin-top:18px}.stats{gap:18px}.hero-card{padding:24px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="index.html"><div class="logo-mark">F</div><div>Femons <span>Education</span></div></a>
+    <div class="menu"><a class=" " href="index.html">Ana Sayfa</a><a class=" " href="femons_neden_makedonya.html">Neden Makedonya?</a><a class=" " href="femons_programlar.html">Programlar</a><a class=" " href="femons_basvuru_sureci.html">Başvuru Süreci</a><a class="active " href="blog.html">Blog</a><a class=" " href="femons_hakkimizda.html">Hakkımızda</a><a class=" cta-mini" href="femons_iletisim.html">Ücretsiz Danışmanlık</a></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">FEMONS REHBER</div>
+      <h1>Gostivar’da Öğrenci Hayatı</h1>
+      <p>Makedonya’da üniversite eğitimi, başvuru süreci ve öğrenci hayatı hakkında rehber içerik.</p>
+      <div class="btns">
+        <a class="btn btn-orange" href="femons_iletisim.html">Ücretsiz Bilgi Al</a>
+        <a class="btn btn-outline" href="femons_programlar.html">Programları İncele</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>7</b><span>Üniversite</span></div>
+        <div class="stat"><b>30+</b><span>Program</span></div>
+        <div class="stat"><b>TR</b><span>Danışmanlık</span></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h2>Başvuru dönemi açık</h2>
+      <p>Kontenjanlar dolmadan bölüm ve üniversite seçeneklerini birlikte netleştirelim.</p>
+      <div class="checks">
+        <div class="check">YKS şartı olmadan başvuru seçenekleri</div>
+        <div class="check">7 üniversite ve onlarca program alternatifi</div>
+        <div class="check">Evrak, başvuru ve kayıt süreci takibi</div>
+      </div>
+      <a class="btn btn-orange" href="femons_basvuru_sureci.html">Başvuru Süreci</a>
+    </div>
+  </div>
+</header>
+
+    <main><section class="section"><div class="container">
+    <div class="grid3">
+      <div class="card"><h3>Genel Bilgi</h3><p>Gostivar’da Öğrenci Hayatı hakkında öğrencilerin en çok merak ettiği başlıkları sade bir dille ele alıyoruz.</p></div>
+      <div class="card"><h3>Başvuru Açısından</h3><p>Üniversite, bölüm, şehir ve belge süreci öğrencinin hedeflerine göre değerlendirilmelidir.</p></div>
+      <div class="card"><h3>Femons Desteği</h3><p>Doğru yönlendirme, evrak kontrolü ve başvuru takibi için bizimle iletişime geçebilirsin.</p></div>
+    </div>
+    </div></section><section class="section"><div class="container"><div class="cta-band"><div><h2>Bu bölüm sana uygun mu?</h2><p>Ücretsiz ön görüşmede birlikte değerlendirelim.</p></div><a class="btn btn-orange" href="femons_iletisim.html">Bilgi Al</a></div></div></section></main>
+<footer>
+  <div class="container footer-grid">
+    <div><b>Femons Education</b><p>YKS şartı olmadan Makedonya’da üniversite başvurusu için Türkçe danışmanlık.</p></div>
+    <div><b>Sayfalar</b><a href="femons_programlar.html">Programlar</a><a href="blog.html">Blog</a><a href="femons_iletisim.html">İletişim</a></div>
+    <div><b>İletişim</b><a href="tel:+905555550556">+90 555 555 05 56</a><a href="https://www.femons.com.tr">www.femons.com.tr</a></div>
+  </div>
+</footer>
+</body>
+</html>
