@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sık Sorulan Sorular | Femons Education</title>
-<meta name="description" content="YKS, denklik, başvuru ve kayıt süreci hakkında en çok sorulan başlıklar.">
+<title>SSS | Makedonya Üniversite Başvurusu Sık Sorulan Sorular | Femons</title>
+<meta name="description" content="Makedonya üniversite başvurusu, YKS şartı, diploma denkliği, mavi diploma, yaşam maliyetleri ve Femons danışmanlık süreci hakkında sık sorulan sorular.">
 <style>
 :root{
   --dark:#001621;
@@ -83,71 +83,130 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
 
 
 
-/* NAV FIX V4 */
-.nav-inner{height:70px;gap:12px;max-width:1280px}
-.logo{min-width:max-content;margin-right:14px}
-.menu{display:flex;align-items:center;gap:3px;flex:1;justify-content:flex-end;white-space:nowrap}
-.menu a{font-size:13px;padding:8px 9px;line-height:1}
-.menu .cta-mini{padding:10px 13px;margin-left:4px}
-.mobile-toggle{display:none;background:var(--orange);color:#fff;border:0;border-radius:9px;padding:10px 12px;font-weight:900}
-@media(max-width:1080px){
-  .menu a{font-size:12.5px;padding:8px 7px}
-  .logo div:last-child{font-size:14px}
+
+/* NAV FINAL V6 */
+.nav-inner{
+  height:70px!important;
+  gap:12px!important;
+  max-width:1320px!important;
+}
+.logo{
+  min-width:max-content!important;
+  margin-right:14px!important;
+}
+.menu{
+  display:flex!important;
+  align-items:center!important;
+  gap:3px!important;
+  flex:1!important;
+  justify-content:flex-end!important;
+  white-space:nowrap!important;
+}
+.menu a{
+  font-size:13px!important;
+  padding:8px 8px!important;
+  line-height:1!important;
+}
+.menu .cta-mini{
+  background:var(--orange)!important;
+  color:#fff!important;
+  padding:11px 14px!important;
+  margin-left:4px!important;
+}
+.nav-phone{
+  color:#fff!important;
+  font-weight:800!important;
+  opacity:.9!important;
+  padding-left:10px!important;
+}
+.mobile-toggle{
+  display:none!important;
+  background:var(--orange)!important;
+  color:#fff!important;
+  border:0!important;
+  border-radius:9px!important;
+  padding:10px 12px!important;
+  font-weight:900!important;
+}
+@media(max-width:1160px){
+  .menu a{font-size:12px!important;padding:8px 6px!important}
+  .logo div:last-child{font-size:14px!important}
+  .nav-phone{display:none!important}
 }
 @media(max-width:900px){
-  .mobile-toggle{display:block;margin-left:auto}
-  .menu{display:none;position:absolute;top:70px;left:0;right:0;background:#001621;padding:14px 18px;flex-direction:column;align-items:stretch;white-space:normal;box-shadow:0 18px 35px rgba(0,0,0,.25)}
-  .menu.open{display:flex}
-  .menu a{font-size:15px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.06)}
-  .menu .cta-mini{margin-left:0;text-align:center}
+  .mobile-toggle{display:block!important;margin-left:auto!important}
+  .menu{
+    display:none!important;
+    position:absolute!important;
+    top:70px!important;
+    left:0!important;
+    right:0!important;
+    background:#001621!important;
+    padding:14px 18px!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    white-space:normal!important;
+    box-shadow:0 18px 35px rgba(0,0,0,.25)!important;
+  }
+  .menu.open{display:flex!important}
+  .menu a{font-size:15px!important;padding:14px 16px!important;border-bottom:1px solid rgba(255,255,255,.06)!important}
+  .menu .cta-mini{margin-left:0!important;text-align:center!important}
 }
 
 
-/* WHATSAPP FLOAT FIX V5 */
+/* WHATSAPP ICON FLOAT V6 */
 .whatsapp-float{
   position:fixed!important;
   right:22px!important;
   bottom:22px!important;
   z-index:99999!important;
+  width:56px!important;
+  height:56px!important;
+  padding:0!important;
+  border-radius:50%!important;
+  display:grid!important;
+  place-items:center!important;
   background:#25D366!important;
   color:#fff!important;
-  height:48px!important;
-  padding:0 18px!important;
-  border-radius:999px!important;
-  display:flex!important;
-  align-items:center!important;
-  gap:9px!important;
-  font-size:14px!important;
-  font-weight:900!important;
-  line-height:1!important;
-  box-shadow:0 14px 32px rgba(0,0,0,.24)!important;
-  border:2px solid rgba(255,255,255,.9)!important;
+  font-size:0!important;
+  box-shadow:0 14px 34px rgba(0,0,0,.25)!important;
+  border:3px solid rgba(255,255,255,.95)!important;
 }
 .whatsapp-float:before{
-  content:"☎";
-  width:26px;
-  height:26px;
-  border-radius:50%;
-  background:rgba(255,255,255,.18);
-  display:grid;
-  place-items:center;
-  font-size:15px;
+  content:"☎"!important;
+  font-size:25px!important;
+  line-height:1!important;
+  background:none!important;
+  width:auto!important;
+  height:auto!important;
 }
-.whatsapp-float:hover{
-  transform:translateY(-2px);
-  box-shadow:0 18px 40px rgba(0,0,0,.28)!important;
+.whatsapp-float:after{
+  content:"Kayıt talebi gönder"!important;
+  position:absolute!important;
+  right:68px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  background:#001621!important;
+  color:#fff!important;
+  font-size:13px!important;
+  font-weight:800!important;
+  white-space:nowrap!important;
+  padding:9px 12px!important;
+  border-radius:10px!important;
+  opacity:0!important;
+  pointer-events:none!important;
+  transition:.2s!important;
 }
+.whatsapp-float:hover:after{opacity:1!important}
+.whatsapp-float:hover{transform:translateY(-2px)!important}
 @media(max-width:600px){
   .whatsapp-float{
-    right:14px!important;
-    bottom:14px!important;
-    left:auto!important;
-    width:auto!important;
-    max-width:calc(100vw - 28px)!important;
-    height:46px!important;
-    padding:0 14px!important;
-    font-size:13px!important;
+    right:16px!important;
+    bottom:16px!important;
+    width:52px!important;
+    height:52px!important;
   }
+  .whatsapp-float:after{display:none!important}
 }
 
 </style>
@@ -157,18 +216,19 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   <div class="container nav-inner">
     <a class="logo" href="index.html"><div class="logo-mark">F</div><div>Femons <span>Education</span></div></a>
     <button class="mobile-toggle" onclick="toggleMenu()">Menü</button>
-    <div class="menu"><a class=" " href="index.html">Ana Sayfa</a><a class=" " href="femons_hakkimizda.html">Hakkımızda</a><a class=" " href="universiteler.html">Üniversiteler</a><a class=" " href="femons_programlar.html">Programlar</a><a class=" " href="femons_basvuru_sureci.html">Başvuru</a><a class=" " href="blog.html">Blog</a><a class=" cta-mini" href="femons_iletisim.html">Ücretsiz Danışmanlık</a></div>
+    <div class="menu"><a class="" href="index.html">Ana Sayfa</a><a class="" href="femons_hakkimizda.html">Hakkımızda</a><a class="" href="femons_neden_makedonya.html">Neden Makedonya?</a><a class="" href="femons_programlar.html">Programlar</a><a class="" href="femons_basvuru_sureci.html">Başvuru Süreci</a><a class="active" href="femons_sss.html">SSS</a><a class="" href="blog.html">Blog</a><a class="cta-mini" href="femons_iletisim.html">Kayıt Talebi</a><a class="nav-phone" href="tel:+905465288580">+90 546 528 85 80</a></div>
   </div>
 </nav>
+<a class="whatsapp-float" aria-label="WhatsApp ile kayıt talebi gönder" href="https://wa.me/905465288580"></a>
 
 <header class="hero">
   <div class="container hero-grid">
     <div>
-      <div class="kicker">FEMONS EDUCATION</div>
-      <h1>Aklındaki sorulara hızlı cevaplar.</h1>
-      <p>YKS, denklik, başvuru ve kayıt süreci hakkında en çok sorulan başlıklar.</p>
+      <div class="kicker">SIK SORULAN SORULAR</div>
+      <h1>Makedonya’da üniversite hakkında merak edilenler.</h1>
+      <p>YKS şartı, diploma, denklik, mavi diploma, başvuru belgeleri, yaşam maliyetleri ve Femons danışmanlık süreci hakkında temel cevaplar.</p>
       <div class="btns">
-        <a class="btn btn-orange" href="femons_iletisim.html">Ücretsiz Bilgi Al</a>
+        <a class="btn btn-orange" href="femons_iletisim.html">Kayıt Talebi Gönder</a>
         <a class="btn btn-outline" href="femons_programlar.html">Programları İncele</a>
       </div>
       <div class="stats">
@@ -178,33 +238,58 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
       </div>
     </div>
     <div class="hero-card">
-      <h2>Başvuru dönemi açık</h2>
-      <p>Kontenjanlar dolmadan bölüm ve üniversite seçeneklerini birlikte netleştirelim.</p>
+      <h2>Makedonya’da eğitim planını birlikte çıkaralım</h2>
+      <p>Üniversite, bölüm, şehir, başvuru evrakları ve kayıt sürecini öğrenciye göre değerlendiriyoruz.</p>
       <div class="checks">
         <div class="check">YKS şartı olmadan başvuru seçenekleri</div>
-        <div class="check">7 üniversite ve onlarca program alternatifi</div>
-        <div class="check">Evrak, başvuru ve kayıt süreci takibi</div>
+        <div class="check">Türkçe danışmanlık ve evrak takibi</div>
+        <div class="check">7 üniversite ve bölüm yönlendirmesi</div>
       </div>
-      <a class="btn btn-orange" href="femons_basvuru_sureci.html">Başvuru Süreci</a>
+      <a class="btn btn-orange" href="femons_iletisim.html">WhatsApp’tan Bilgi Al</a>
     </div>
   </div>
 </header>
-<main><section class="section"><div class="container"><div class="grid3"><div class="card"><h3>YKS şartı var mı?</h3><p>Bazı başvuru seçeneklerinde YKS puanı aranmayabilir. Bölüm ve üniversiteye göre süreç değişebilir.</p></div><div class="card"><h3>Diploma geçerli mi?</h3><p>Tanınırlık ve denklik konusu üniversite, bölüm ve güncel kriterlere göre değerlendirilmelidir.</p></div><div class="card"><h3>Başvuru için ne gerekir?</h3><p>Genellikle diploma, transkript, pasaport ve başvuru belgeleri gerekir.</p></div></div></div></section><section class="section"><div class="container"><div class="cta-band"><div><h2>Ücretsiz bilgi al.</h2><p>Başvuru seçeneklerini birlikte netleştirelim.</p></div><a class="btn btn-orange" href="femons_iletisim.html">Bilgi Al</a></div></div></section></main>
-<a class="whatsapp-float" href="https://wa.me/905465288580">WhatsApp +90 546 528 85 80</a>
+<main>
+<section class="section">
+  <div class="container">
+    <h2>En çok sorulan sorular</h2>
+    <p class="lead">Bu cevaplar genel bilgilendirme amaçlıdır. Üniversite, bölüm ve başvuru yılına göre süreç değişebileceği için öğrenci dosyası ayrıca değerlendirilmelidir.</p>
+    <div class="grid3">
+      <div class="card"><h3>Makedonya’da üniversite okumak için YKS şartı var mı?</h3><p>Makedonya’daki bazı üniversite ve programlarda Türkiye’deki YKS puanı başvuru için zorunlu olmayabilir. Ancak bu durum üniversite, bölüm ve güncel başvuru kriterlerine göre değişebilir. Başvuru öncesinde öğrenci dosyasının ayrıca değerlendirilmesi gerekir.</p></div>
+<div class="card"><h3>Lise diplomasıyla başvuru yapılabilir mi?</h3><p>Evet, birçok başvuru sürecinde lise diploması ve transkript temel belgeler arasındadır. Bunun yanında pasaport, fotoğraf, başvuru formu ve üniversitenin talep ettiği ek belgeler gerekebilir.</p></div>
+<div class="card"><h3>Makedonya’da hangi bölümler tercih ediliyor?</h3><p>Tıp, Diş Hekimliği, Hukuk, Psikoloji, Mimarlık, Bilgisayar Mühendisliği, İnşaat Mühendisliği ve Hemşirelik en çok araştırılan programlar arasındadır.</p></div>
+<div class="card"><h3>Diploma Türkiye’de geçerli olur mu?</h3><p>Yurtdışı diplomalarının Türkiye’de değerlendirilmesi üniversite, bölüm, öğrencinin eğitim süreci ve güncel YÖK kriterlerine göre yapılır. Bu nedenle &#x27;her diploma otomatik geçerlidir&#x27; gibi kesin ifadeler doğru değildir.</p></div>
+<div class="card"><h3>Denklik ve tanınırlık aynı şey mi?</h3><p>Hayır. Tanınırlık, üniversitenin ilgili otoriteler tarafından tanınıp tanınmadığıyla ilgilidir. Denklik ise mezuniyet sonrasında diploma ve eğitim içeriğinin Türkiye’de ilgili kurumlarca değerlendirilmesi sürecidir.</p></div>
+<div class="card"><h3>Mavi diploma nedir?</h3><p>Mavi diploma olarak bilinen belge, Avrupa’da diploma ekine ilişkin kullanılan bir kavramdır. Ancak tek başına Türkiye’de denklik garantisi anlamına gelmez. Üniversite, bölüm ve mezuniyet sonrası süreç ayrıca değerlendirilmelidir.</p></div>
+<div class="card"><h3>Makedonya’da eğitim dili nedir?</h3><p>Eğitim dili üniversiteye ve programa göre değişebilir. Bazı programlarda Türkçe, İngilizce veya farklı dillerde eğitim seçenekleri bulunabilir. Başvuru öncesi program dili mutlaka kontrol edilmelidir.</p></div>
+<div class="card"><h3>Makedonya’da yaşam maliyetleri nasıldır?</h3><p>Makedonya, birçok Avrupa ülkesine göre daha ulaşılabilir yaşam maliyetleriyle öne çıkabilir. Ancak şehir, konaklama tipi, öğrencinin yaşam tarzı ve dönemsel ekonomik koşullar maliyetleri etkiler.</p></div>
+<div class="card"><h3>Yurt mu ev mi daha mantıklı?</h3><p>İlk yıl öğrenciler için yurt veya güvenilir konaklama seçenekleri daha pratik olabilir. Sonraki dönemlerde öğrenci şehre alıştıkça ev seçeneği de değerlendirilebilir.</p></div>
+<div class="card"><h3>Başvuru ne zaman yapılmalı?</h3><p>Kontenjanlar, üniversite takvimleri ve belge hazırlığı nedeniyle mümkün olduğunca erken başvuru planı yapılması daha sağlıklıdır. Geç başvurularda bölüm ve kontenjan seçeneği azalabilir.</p></div>
+<div class="card"><h3>Femons hangi konularda destek verir?</h3><p>Femons; üniversite ve bölüm seçimi, başvuru dosyasının hazırlanması, evrak kontrolü, kayıt süreci ve öğrenciye özel yönlendirme konularında danışmanlık sağlar.</p></div>
+<div class="card"><h3>WhatsApp’tan bilgi alabilir miyim?</h3><p>Evet. Kayıt talebi ve ön görüşme için +90 546 528 85 80 numaralı WhatsApp hattından Femons ekibine ulaşabilirsiniz.</p></div>
+
+    </div>
+  </div>
+</section>
+<section class="section alt">
+  <div class="container">
+    <div class="cta-band"><div><h2>Sorunun burada yok mu?</h2><p>WhatsApp üzerinden Femons ekibine yaz, bölüm ve üniversite seçeneklerini birlikte değerlendirelim.</p></div><a class="btn btn-orange" href="femons_iletisim.html">Kayıt Talebi Gönder</a></div>
+  </div>
+</section>
+</main>
+
 <footer>
   <div class="container footer-grid">
     <div><b>Femons Education</b><p>YKS şartı olmadan Makedonya’da üniversite başvurusu için Türkçe danışmanlık.</p></div>
-    <div><b>Sayfalar</b><a href="femons_programlar.html">Programlar</a><a href="blog.html">Blog</a><a href="femons_iletisim.html">İletişim</a></div>
+    <div><b>Sayfalar</b><a href="femons_hakkimizda.html">Hakkımızda</a><a href="femons_neden_makedonya.html">Neden Makedonya?</a><a href="femons_programlar.html">Programlar</a><a href="femons_sss.html">SSS</a><a href="blog.html">Blog</a></div>
     <div><b>İletişim</b><a href="tel:+905465288580">+90 546 528 85 80</a><a href="mailto:info@femons.com.tr">info@femons.com.tr</a><a href="https://www.femons.com.tr">www.femons.com.tr</a></div>
   </div>
 </footer>
-
 <script>
 function toggleMenu(){
   var menu=document.querySelector('.menu');
   if(menu){menu.classList.toggle('open');}
 }
 </script>
-
 </body>
 </html>
