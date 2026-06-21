@@ -83,13 +83,34 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
 .whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:9999;background:#25D366;color:white;padding:13px 18px;border-radius:999px;font-weight:900;box-shadow:0 12px 30px rgba(0,0,0,.22)}
 @media(max-width:600px){.whatsapp-float{left:18px;right:18px;text-align:center}}
 
+
+/* NAV FIX V4 */
+.nav-inner{height:70px;gap:12px;max-width:1280px}
+.logo{min-width:max-content;margin-right:14px}
+.menu{display:flex;align-items:center;gap:3px;flex:1;justify-content:flex-end;white-space:nowrap}
+.menu a{font-size:13px;padding:8px 9px;line-height:1}
+.menu .cta-mini{padding:10px 13px;margin-left:4px}
+.mobile-toggle{display:none;background:var(--orange);color:#fff;border:0;border-radius:9px;padding:10px 12px;font-weight:900}
+@media(max-width:1080px){
+  .menu a{font-size:12.5px;padding:8px 7px}
+  .logo div:last-child{font-size:14px}
+}
+@media(max-width:900px){
+  .mobile-toggle{display:block;margin-left:auto}
+  .menu{display:none;position:absolute;top:70px;left:0;right:0;background:#001621;padding:14px 18px;flex-direction:column;align-items:stretch;white-space:normal;box-shadow:0 18px 35px rgba(0,0,0,.25)}
+  .menu.open{display:flex}
+  .menu a{font-size:15px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.06)}
+  .menu .cta-mini{margin-left:0;text-align:center}
+}
+
 </style>
 </head>
 <body>
 <nav>
   <div class="container nav-inner">
     <a class="logo" href="index.html"><div class="logo-mark">F</div><div>Femons <span>Education</span></div></a>
-    <div class="menu"><a class=" " href="index.html">Ana Sayfa</a><a class=" " href="femons_hakkimizda.html">Hakkımızda</a><a class=" " href="universiteler.html">Üniversiteler</a><a class=" " href="femons_neden_makedonya.html">Neden Makedonya?</a><a class=" " href="femons_programlar.html">Programlar</a><a class=" " href="femons_basvuru_sureci.html">Başvuru Süreci</a><a class="active " href="blog.html">Blog</a><a class=" cta-mini" href="femons_iletisim.html">Ücretsiz Danışmanlık</a></div>
+    <button class="mobile-toggle" onclick="toggleMenu()">Menü</button>
+    <div class="menu"><a class=" " href="index.html">Ana Sayfa</a><a class=" " href="femons_hakkimizda.html">Hakkımızda</a><a class=" " href="universiteler.html">Üniversiteler</a><a class=" " href="femons_programlar.html">Programlar</a><a class=" " href="femons_basvuru_sureci.html">Başvuru</a><a class="active " href="blog.html">Blog</a><a class=" cta-mini" href="femons_iletisim.html">Ücretsiz Danışmanlık</a></div>
   </div>
 </nav>
 
@@ -130,5 +151,13 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
     <div><b>İletişim</b><a href="tel:+905465288580">+90 546 528 85 80</a><a href="mailto:info@femons.com.tr">info@femons.com.tr</a><a href="https://www.femons.com.tr">www.femons.com.tr</a></div>
   </div>
 </footer>
+
+<script>
+function toggleMenu(){
+  var menu=document.querySelector('.menu');
+  if(menu){menu.classList.toggle('open');}
+}
+</script>
+
 </body>
 </html>
