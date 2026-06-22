@@ -2,278 +2,253 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>İletişim | Femons Education</title>
-<meta name="description" content="Makedonya’da üniversite eğitimi için bizimle iletişime geç.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-:root{
-  --dark:#001621;
-  --dark2:#00243A;
-  --orange:#FF4103;
-  --white:#ffffff;
-  --soft:#f4f6f8;
-  --line:#e6edf2;
-  --text:#001621;
-  --muted:#667789;
-}
-
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Segoe UI',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:var(--text);line-height:1.6}
-a{text-decoration:none;color:inherit}
+/* === NAV CSS === */
 .container{max-width:1180px;margin:0 auto;padding:0 24px}
 nav{position:sticky;top:0;z-index:1000;background:rgba(0,22,33,.98);box-shadow:0 2px 18px rgba(0,0,0,.28)}
 .nav-inner{height:74px;display:flex;align-items:center;gap:18px}
-.logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:900;margin-right:auto}
-.logo-mark{width:40px;height:40px;background:var(--orange);border-radius:11px;display:grid;place-items:center;font-weight:900}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:900;margin-right:auto;text-decoration:none}
+.logo-mark{width:40px;height:40px;background:var(--orange);border-radius:11px;display:grid;place-items:center;font-weight:900;font-size:18px;color:#fff}
 .logo span{color:var(--orange)}
-.menu{display:flex;align-items:center;gap:4px}
-.menu a{color:rgba(255,255,255,.72);font-size:14px;font-weight:650;padding:9px 11px;border-radius:9px}
+.menu{display:flex;align-items:center;gap:3px;flex:1;justify-content:flex-end;white-space:nowrap}
+.menu a{color:rgba(255,255,255,.72);font-size:13px;font-weight:650;padding:8px 8px;border-radius:9px;text-decoration:none;line-height:1}
 .menu a:hover,.menu a.active{background:rgba(255,255,255,.1);color:#fff}
-.menu .cta-mini{background:var(--orange);color:#fff;margin-left:6px}
-.hero{background:radial-gradient(circle at 75% 22%,rgba(255,65,3,.25),transparent 26%),linear-gradient(135deg,var(--dark),var(--dark2) 55%,var(--dark));color:#fff}
-.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:54px;align-items:center;padding:86px 0 74px}
-.kicker{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,65,3,.38);background:rgba(255,65,3,.12);color:#ffb69c;border-radius:999px;padding:8px 14px;font-size:12px;font-weight:900;letter-spacing:1px;margin-bottom:18px}
-h1{font-size:58px;line-height:1.03;letter-spacing:-2.2px;max-width:760px}
-.hero p{font-size:19px;color:rgba(255,255,255,.78);max-width:640px;margin:22px 0 28px}
-.btns{display:flex;gap:14px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:11px;font-weight:900}
-.btn-orange{background:var(--orange);color:#fff;box-shadow:0 14px 34px rgba(255,65,3,.28)}
-.btn-outline{border:1px solid rgba(255,255,255,.32);color:#fff;background:rgba(255,255,255,.06)}
-.stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:34px}
-.stat b{display:block;font-size:32px;color:#fff;line-height:1}.stat span{font-size:13px;color:rgba(255,255,255,.65)}
-.hero-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:26px;padding:30px;box-shadow:0 30px 80px rgba(0,0,0,.25);backdrop-filter:blur(12px)}
-.hero-card h2{font-size:26px;margin-bottom:12px}
-.checks{display:grid;gap:13px;margin:22px 0}
-.check{display:flex;gap:10px;color:rgba(255,255,255,.86)}
-.check:before{content:"✓";width:23px;height:23px;border-radius:50%;background:var(--orange);display:grid;place-items:center;flex:0 0 23px;font-size:13px}
-.section{padding:72px 0}
-.section.alt{background:var(--soft)}
-.section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:30px}
-.section h2{font-size:40px;line-height:1.12;letter-spacing:-1.2px}
-.section .lead{color:var(--muted);font-size:17px;max-width:720px;margin-top:12px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:0 16px 42px rgba(0,22,33,.06)}
-.card h3{font-size:21px;margin-bottom:9px}
-.card p{color:var(--muted)}
-.uni-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;min-height:150px;box-shadow:0 12px 32px rgba(0,22,33,.05);display:flex;flex-direction:column;justify-content:space-between}
-.uni-card b{font-size:18px}.uni-card span{color:var(--muted);font-size:14px;margin-top:8px;display:block}
-.uni-card a{color:var(--orange);font-weight:900;margin-top:16px;display:inline-block}
-.program{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;font-weight:900;box-shadow:0 10px 28px rgba(0,22,33,.045)}
-.program small{display:block;color:var(--muted);font-weight:600;margin-top:4px}
-.steps{counter-reset:step;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
-.step:before{counter-increment:step;content:counter(step);width:34px;height:34px;border-radius:10px;background:var(--orange);color:#fff;font-weight:900;display:grid;place-items:center;margin-bottom:16px}
-.blog-list{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.blog-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 14px 38px rgba(0,22,33,.055)}
-.blog-card b{font-size:19px}.blog-card p{color:var(--muted);margin:10px 0 16px}.blog-card a{color:var(--orange);font-weight:900}
-.cta-band{background:linear-gradient(135deg,var(--dark),var(--dark2));border-radius:28px;color:#fff;padding:42px;display:flex;justify-content:space-between;align-items:center;gap:24px}
-.cta-band h2{font-size:34px}.cta-band p{color:rgba(255,255,255,.72);margin-top:8px}
-footer{background:var(--dark);color:rgba(255,255,255,.7);padding:38px 0}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
-footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255,.72)}
+.menu .cta-mini{background:var(--orange);color:#fff;padding:11px 14px;margin-left:4px}
+.menu .cta-mini:hover{background:#e03800}
+.nav-phone{color:#fff;font-weight:800;opacity:.9;padding-left:10px;font-size:13px;text-decoration:none;white-space:nowrap}
+.mobile-toggle{display:none;background:var(--orange);color:#fff;border:0;border-radius:9px;padding:10px 14px;font-weight:900;cursor:pointer;margin-left:auto;font-size:14px}
 @media(max-width:960px){
-  .menu{display:none}.hero-grid{grid-template-columns:1fr;padding:62px 0}.grid3,.grid4,.steps,.blog-list,.footer-grid{grid-template-columns:1fr 1fr}h1{font-size:42px}.section-head{display:block}
+  .nav-phone{display:none}
+  .mobile-toggle{display:block}
+  .menu{display:none;position:absolute;top:74px;left:0;right:0;background:#001621;padding:14px 18px;flex-direction:column;align-items:stretch;white-space:normal;box-shadow:0 18px 35px rgba(0,0,0,.25);z-index:999}
+  .menu.open{display:flex}
+  .menu a{font-size:15px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.06)}
+  .menu .cta-mini{margin-left:0;text-align:center}
+  .container{padding:0 18px}
 }
-@media(max-width:600px){
-  .container{padding:0 18px}.grid3,.grid4,.steps,.blog-list,.footer-grid{grid-template-columns:1fr}.hero-grid{padding:48px 0}h1{font-size:34px}.hero p{font-size:17px}.section{padding:50px 0}.section h2{font-size:30px}.cta-band{display:block;padding:28px}.cta-band .btn{margin-top:18px}.stats{gap:18px}.hero-card{padding:24px}
-}
+/* === / NAV CSS === */
 
+    
 
-
-
-
-/* NAV FINAL V6 */
-.nav-inner{
-  height:70px!important;
-  gap:12px!important;
-  max-width:1320px!important;
-}
-.logo{
-  min-width:max-content!important;
-  margin-right:14px!important;
-}
-.menu{
-  display:flex!important;
-  align-items:center!important;
-  gap:3px!important;
-  flex:1!important;
-  justify-content:flex-end!important;
-  white-space:nowrap!important;
-}
-.menu a{
-  font-size:13px!important;
-  padding:8px 8px!important;
-  line-height:1!important;
-}
-.menu .cta-mini{
-  background:var(--orange)!important;
-  color:#fff!important;
-  padding:11px 14px!important;
-  margin-left:4px!important;
-}
-.nav-phone{
-  color:#fff!important;
-  font-weight:800!important;
-  opacity:.9!important;
-  padding-left:10px!important;
-}
-.mobile-toggle{
-  display:none!important;
-  background:var(--orange)!important;
-  color:#fff!important;
-  border:0!important;
-  border-radius:9px!important;
-  padding:10px 12px!important;
-  font-weight:900!important;
-}
-@media(max-width:1160px){
-  .menu a{font-size:12px!important;padding:8px 6px!important}
-  .logo div:last-child{font-size:14px!important}
-  .nav-phone{display:none!important}
-}
-@media(max-width:900px){
-  .mobile-toggle{display:block!important;margin-left:auto!important}
-  .menu{
-    display:none!important;
-    position:absolute!important;
-    top:70px!important;
-    left:0!important;
-    right:0!important;
-    background:#001621!important;
-    padding:14px 18px!important;
-    flex-direction:column!important;
-    align-items:stretch!important;
-    white-space:normal!important;
-    box-shadow:0 18px 35px rgba(0,0,0,.25)!important;
+  :root {
+    --orange: #FF4103;
+    --dark: #001621;
+    --dark2: #00243a;
+    --white: #ffffff;
+    --gray-light: #f4f6f8;
+    --gray-mid: #e2e8ed;
+    --gray-text: #6b7a8a;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
   }
-  .menu.open{display:flex!important}
-  .menu a{font-size:15px!important;padding:14px 16px!important;border-bottom:1px solid rgba(255,255,255,.06)!important}
-  .menu .cta-mini{margin-left:0!important;text-align:center!important}
-}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: var(--gray-light); color: var(--dark); font-size: 15px; line-height: 1.6; }
+
+  /* ── NAV ── */
 
 
-/* WHATSAPP ICON FLOAT V6 */
-.whatsapp-float{
-  position:fixed!important;
-  right:22px!important;
-  bottom:22px!important;
-  z-index:99999!important;
-  width:56px!important;
-  height:56px!important;
-  padding:0!important;
-  border-radius:50%!important;
-  display:grid!important;
-  place-items:center!important;
-  background:#25D366!important;
-  color:#fff!important;
-  font-size:0!important;
-  box-shadow:0 14px 34px rgba(0,0,0,.25)!important;
-  border:3px solid rgba(255,255,255,.95)!important;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  margin-right: 40px;
+  flex-shrink: 0;
 }
-.whatsapp-float:before{
-  content:"☎"!important;
-  font-size:25px!important;
-  line-height:1!important;
-  background:none!important;
-  width:auto!important;
-  height:auto!important;
+.logo-icon {
+  width: 38px;
+  height: 38px;
+  background: #FF4103;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  color: #fff;
+  font-size: 17px;
 }
-.whatsapp-float:after{
-  content:"Kayıt talebi gönder"!important;
-  position:absolute!important;
-  right:68px!important;
-  top:50%!important;
-  transform:translateY(-50%)!important;
-  background:#001621!important;
-  color:#fff!important;
-  font-size:13px!important;
-  font-weight:800!important;
-  white-space:nowrap!important;
-  padding:9px 12px!important;
-  border-radius:10px!important;
-  opacity:0!important;
-  pointer-events:none!important;
-  transition:.2s!important;
+.logo-text {
+  color: #fff;
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: -.3px;
 }
-.whatsapp-float:hover:after{opacity:1!important}
-.whatsapp-float:hover{transform:translateY(-2px)!important}
-@media(max-width:600px){
-  .whatsapp-float{
-    right:16px!important;
-    bottom:16px!important;
-    width:52px!important;
-    height:52px!important;
+.logo-text span { color: #FF4103; }
+
+
+
+.nav-cta {
+  background: #FF4103 !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  padding: 9px 20px !important;
+  border-radius: 8px !important;
+  margin-left: 8px;
+  transition: background .18s !important;
+}
+.nav-cta:hover { background: #e03800 !important; }
+.nav-phone {
+  color: rgba(255,255,255,.5);
+  font-size: 13px;
+  text-decoration: none;
+  margin-left: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.nav-phone:hover { color: #fff; }
+
+
+
+
+
+.mobile-
+
+
+
+
+@media (max-width: 960px) {
+  
+  .nav-phone { display: none; }
+  
+  
+}
+@media (max-width: 480px) {
+  .logo-text { font-size: 15px; }
+}
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--dark2) 100%);
+    padding: 52px 24px 44px; text-align: center; position: relative; overflow: hidden;
   }
-  .whatsapp-float:after{display:none!important}
-}
+  .hero::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse at 60% 50%, rgba(255,65,3,.13) 0%, transparent 55%); }
+  .hero-eyebrow { display:inline-block; background:rgba(255,65,3,.15); color:var(--orange); font-size:11px; font-weight:800; letter-spacing:2px; text-transform:uppercase; padding:5px 16px; border-radius:20px; margin-bottom:18px; border:1px solid rgba(255,65,3,.3); position:relative; }
+  .hero h1 { color:#fff; font-size: clamp(24px,4vw,40px); font-weight:800; line-height:1.2; margin-bottom:12px; position:relative; }
+  .hero p { color:rgba(255,255,255,.6); max-width:540px; margin:0 auto; font-size:15px; position:relative; }
+
+  /* ── PAGE LAYOUT ── */
+  .page { max-width: 1100px; margin: 0 auto; padding: 48px 24px 72px; display: grid; grid-template-columns: 1fr 420px; gap: 40px; align-items: start; }
+
+  /* ── INFO PANEL ── */
+  .info-panel { display: flex; flex-direction: column; gap: 24px; }
+
+  .info-card { background: #fff; border: 1px solid var(--gray-mid); border-radius: 14px; padding: 28px 26px; }
+  .info-card h2 { font-size: 18px; font-weight: 800; margin-bottom: 6px; }
+  .info-card p { font-size: 14px; color: var(--gray-text); line-height: 1.7; margin-bottom: 20px; }
+
+  .contact-list { display: flex; flex-direction: column; gap: 0; }
+  .contact-group { padding: 16px 0; border-bottom: 1px solid var(--gray-light); }
+  .contact-group:last-child { border-bottom: none; padding-bottom: 0; }
+  .contact-group-label { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--orange); margin-bottom: 10px; }
+  .contact-item { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .contact-item:last-child { margin-bottom: 0; }
+  .contact-icon { width: 34px; height: 34px; border-radius: 9px; background: var(--gray-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; }
+  .contact-item a { color: var(--dark); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .contact-item a:hover { color: var(--orange); }
+  .contact-item span { font-size: 13px; color: var(--gray-text); }
+
+  .wa-card { background: #25D366; border-radius: 12px; padding: 18px 20px; display: flex; align-items: center; gap: 14px; text-decoration: none; transition: background .2s, transform .15s; }
+  .wa-card:hover { background: #20bd59; transform: translateY(-1px); }
+  .wa-card svg { flex-shrink: 0; }
+  .wa-card-text { color: #fff; }
+  .wa-card-text strong { display: block; font-size: 15px; font-weight: 700; }
+  .wa-card-text span { font-size: 12px; opacity: .85; }
+
+  /* ── FORM PANEL ── */
+  .form-panel { background: #fff; border: 1px solid var(--gray-mid); border-radius: 14px; padding: 32px 28px; position: sticky; top: 84px; }
+  .form-panel h2 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+  .form-panel > p { font-size: 14px; color: var(--gray-text); margin-bottom: 24px; }
+
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--dark); margin-bottom: 6px; }
+  .form-group label .req { color: var(--orange); margin-left: 2px; }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%; padding: 11px 14px; border: 1.5px solid var(--gray-mid); border-radius: 8px;
+    font-size: 14px; font-family: var(--font); color: var(--dark); background: #fff;
+    transition: border-color .2s, box-shadow .2s; outline: none; appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(255,65,3,.1); }
+  .form-group textarea { resize: vertical; min-height: 90px; }
+  .form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7a8a' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px; cursor: pointer; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  .kvkk-check { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 20px; }
+  .kvkk-check input[type="checkbox"] { width: 16px; height: 16px; margin-top: 2px; accent-color: var(--orange); cursor: pointer; flex-shrink: 0; }
+  .kvkk-check label { font-size: 12px; color: var(--gray-text); line-height: 1.5; cursor: pointer; }
+  .kvkk-check label a { color: var(--orange); }
+
+  .submit-btn {
+    width: 100%; padding: 14px; background: var(--orange); color: #fff;
+    border: none; border-radius: 8px; font-size: 15px; font-weight: 700;
+    font-family: var(--font); cursor: pointer; transition: background .2s, transform .15s;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .submit-btn:hover { background: #e03800; transform: translateY(-1px); }
+  .submit-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+
+  /* success / error states */
+  .form-success { display: none; text-align: center; padding: 32px 16px; }
+  .form-success .check { width: 64px; height: 64px; background: #e8f5e9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 30px; }
+  .form-success h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; }
+  .form-success p { font-size: 14px; color: var(--gray-text); }
+
+  /* ── FOOTER ── */
+  footer { background: var(--dark); color: rgba(255,255,255,.55); padding: 48px 24px 28px; }
+  .footer-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .footer-col p { font-size: 13px; line-height: 1.7; }
+  .footer-col h4 { color: #fff; font-size: 13px; font-weight: 700; letter-spacing: .5px; margin-bottom: 14px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .footer-col ul a { color: rgba(255,255,255,.5); text-decoration: none; font-size: 13px; transition: color .2s; }
+  .footer-col ul a:hover { color: #fff; }
+  .footer-contact-list { display: flex; flex-direction: column; gap: 8px; font-size: 13px; }
+  .footer-contact-list a { color: rgba(255,255,255,.5); text-decoration: none; transition: color .2s; }
+  .footer-contact-list a:hover { color: #fff; }
+  .footer-office-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: var(--orange); margin-top: 10px; margin-bottom: 2px; }
+  .footer-office-label:first-child { margin-top: 0; }
+  .wa-btn-footer { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; padding: 8px 14px; border-radius: 8px; margin-top: 8px; }
+  .footer-bottom { max-width: 1160px; margin: 20px auto 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 12px; }
+
+  @media(max-width:860px){
+    .page { grid-template-columns: 1fr; }
+    .form-panel { position: static; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+  @media(max-width:560px){
+    .footer-inner { grid-template-columns: 1fr; }
+  }
+
+  /* ── MOBİL MENÜ ── */
+  
+  
+  
+  
+  
+  .mobile-
+  
+  
+  
+  
+  @media(max-width:900px){
+    
+    
+    .nav-phone { display: none; }
+  }
 
 </style>
 </head>
 <body>
 <nav>
   <div class="container nav-inner">
-    <a class="logo" href="index.html"><div class="logo-mark">F</div><div>Femons <span>Education</span></div></a>
+    <a class="logo" href="index.html"><div class="logo-mark">F</div><div>Femons <span>Eğitim</span></div></a>
     <button class="mobile-toggle" onclick="toggleMenu()">Menü</button>
-    <div class="menu"><a class=" " href="index.html">Ana Sayfa</a><a class=" " href="femons_hakkimizda.html">Hakkımızda</a><a class=" " href="femons_neden_makedonya.html">Neden Makedonya?</a><a class=" " href="femons_programlar.html">Programlar</a><a class=" " href="femons_basvuru_sureci.html">Başvuru Süreci</a><a class=" " href="femons_sss.html">SSS</a><a class=" " href="blog.html">Blog</a><a class="active cta-mini" href="femons_iletisim.html">Kayıt Talebi</a><a class="nav-phone" href="tel:+905465288580">+90 546 528 85 80</a></div>
+    <div class="menu"><a class="active" href="index.html">Ana Sayfa</a><a class="" href="femons_hakkimizda.html">Hakkımızda</a><a class="" href="femons_neden_makedonya.html">Neden Makedonya?</a><a class="" href="femons_programlar.html">Programlar</a><a class="" href="femons_basvuru_sureci.html">Başvuru Süreci</a><a class="" href="femons_sss.html">SSS</a><a class="" href="blog.html">Blog</a><a class="cta-mini" href="femons_iletisim.html">Kayıt Talebi</a><a class="nav-phone" href="tel:+905465288580">+90 546 528 85 80</a></div>
   </div>
 </nav>
-
-<header class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="kicker">FEMONS EDUCATION</div>
-      <h1>Ücretsiz bilgi al, başvuru sürecini birlikte planlayalım.</h1>
-      <p>Makedonya’da üniversite eğitimi için bizimle iletişime geç.</p>
-      <div class="btns">
-        <a class="btn btn-orange" href="femons_iletisim.html">Kayıt Talebi Gönder</a>
-        <a class="btn btn-outline" href="femons_programlar.html">Programları İncele</a>
-      </div>
-      <div class="stats">
-        <div class="stat"><b>7</b><span>Üniversite</span></div>
-        <div class="stat"><b>30+</b><span>Program</span></div>
-        <div class="stat"><b>TR</b><span>Danışmanlık</span></div>
-      </div>
-    </div>
-    <div class="hero-card">
-      <h2>Başvuru dönemi açık</h2>
-      <p>Kontenjanlar dolmadan bölüm ve üniversite seçeneklerini birlikte netleştirelim.</p>
-      <div class="checks">
-        <div class="check">YKS şartı olmadan başvuru seçenekleri</div>
-        <div class="check">7 üniversite ve onlarca program alternatifi</div>
-        <div class="check">Evrak, başvuru ve kayıt süreci takibi</div>
-      </div>
-      <a class="btn btn-orange" href="femons_basvuru_sureci.html">Başvuru Süreci</a>
-    </div>
-  </div>
-</header>
-<main><section class="section"><div class="container"><div class="grid3">
-<div class="card"><h3>Merkez Ofisimiz</h3><p>Fulya Mahallesi Büyükdere Cad. Osman Apartmanı No: 58 Kat: 2 Daire: 7 Mecidiyeköy - Şişli / İstanbul / Türkiye</p><p><b>Telefon / WhatsApp:</b><br>+90 546 528 85 80</p></div>
-<div class="card"><h3>İzmir Temsilciliğimiz</h3><p><b>Telefon:</b><br>+90 546 528 85 94</p><p>WhatsApp görüşmeleri ana hat üzerinden yapılır.</p></div>
-<div class="card"><h3>Akdeniz Temsilciliğimiz</h3><p><b>Telefon:</b><br>+90 544 976 97 54</p><p>WhatsApp: +90 546 528 85 80</p></div>
-</div>
-<br>
-<div class="grid3">
-<div class="card"><h3>E-posta</h3><p>info@femons.com.tr</p></div>
-<div class="card"><h3>Web</h3><p>www.femons.com.tr</p></div>
-<div class="card"><h3>Kayıt Talebi</h3><p>Bölüm, üniversite ve başvuru süreci için ön görüşme yapabiliriz.</p></div>
-</div></div></section><section class="section"><div class="container"><div class="cta-band"><div><h2>Ücretsiz bilgi al.</h2><p>Başvuru seçeneklerini birlikte netleştirelim.</p></div><a class="btn btn-orange" href="femons_iletisim.html">Bilgi Al</a></div></div></section></main>
-<a class="whatsapp-float" aria-label="WhatsApp ile kayıt talebi gönder" href="https://wa.me/905465288580"></a>
-<footer>
-  <div class="container footer-grid">
-    <div><b>Femons Education</b><p>YKS şartı olmadan Makedonya’da üniversite başvurusu için Türkçe danışmanlık.</p></div>
-    <div><b>Sayfalar</b><a href="femons_programlar.html">Programlar</a><a href="blog.html">Blog</a><a href="femons_iletisim.html">İletişim</a></div>
-    <div><b>İletişim</b><a href="tel:+905465288580">+90 546 528 85 80</a><a href="mailto:info@femons.com.tr">info@femons.com.tr</a><a href="https://www.femons.com.tr">www.femons.com.tr</a></div>
-  </div>
-</footer>
-
-<script>
-function toggleMenu(){
-  var menu=document.querySelector('.menu');
-  if(menu){menu.classList.toggle('open');}
-}
-</script>
-
 </body>
 </html>
