@@ -304,6 +304,21 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
 </main>
 
 <a class="whatsapp-float" aria-label="WhatsApp ile kayıt talebi gönder" href="https://wa.me/905465288580"></a>
+
+<!-- RABBIT HOLE -->
+<section style="padding:48px 24px;background:#f4f6f8;border-top:1px solid #e2e8ed;">
+  <div style="max-width:1160px;margin:0 auto;">
+    <div style="font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#FF4103;margin-bottom:10px;">Bunları da İncele</div>
+    <h2 style="font-size:clamp(18px,2.5vw,26px);font-weight:800;margin-bottom:24px;color:#001621;">Merak ettiğin diğer konular</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
+<a href="blog-makedonya-universite-rehberi-2026.html" style="background:#fff;border:1px solid #e2e8ed;border-radius:12px;padding:16px 18px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:.2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,22,33,.1)';this.style.borderColor='#FF4103'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e2e8ed'"><span style="font-size:22px;flex-shrink:0;">📚</span><div><div style="font-size:14px;font-weight:700;color:#001621;">Makedonya Rehberi 2026</div><div style="font-size:11px;color:#6b7a8a;margin-top:2px;">Keşfet →</div></div></a>
+<a href="makedonya-yasam-maliyetleri.html" style="background:#fff;border:1px solid #e2e8ed;border-radius:12px;padding:16px 18px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:.2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,22,33,.1)';this.style.borderColor='#FF4103'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e2e8ed'"><span style="font-size:22px;flex-shrink:0;">💰</span><div><div style="font-size:14px;font-weight:700;color:#001621;">Yaşam Maliyetleri</div><div style="font-size:11px;color:#6b7a8a;margin-top:2px;">Keşfet →</div></div></a>
+<a href="femons_programlar.html" style="background:#fff;border:1px solid #e2e8ed;border-radius:12px;padding:16px 18px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:.2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,22,33,.1)';this.style.borderColor='#FF4103'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e2e8ed'"><span style="font-size:22px;flex-shrink:0;">📋</span><div><div style="font-size:14px;font-weight:700;color:#001621;">Programlar</div><div style="font-size:11px;color:#6b7a8a;margin-top:2px;">Keşfet →</div></div></a>
+<a href="femons_basvuru_sureci.html" style="background:#fff;border:1px solid #e2e8ed;border-radius:12px;padding:16px 18px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:.2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,22,33,.1)';this.style.borderColor='#FF4103'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e2e8ed'"><span style="font-size:22px;flex-shrink:0;">📄</span><div><div style="font-size:14px;font-weight:700;color:#001621;">Başvuru Süreci</div><div style="font-size:11px;color:#6b7a8a;margin-top:2px;">Keşfet →</div></div></a>
+    </div>
+  </div>
+</section>
+<!-- / RABBIT HOLE -->
 <footer>
   <div class="container footer-grid">
     <div><b>Femons Education</b><p>YKS şartı olmadan Makedonya’da üniversite başvurusu için Türkçe danışmanlık.</p></div>
@@ -320,5 +335,19 @@ function toggleMenu(){
 }
 </script>
 
+
+<!-- STICKY BAR -->
+<div id="stickyBar" style="position:fixed;bottom:0;left:0;right:0;z-index:9997;background:#001621;border-top:2px solid #FF4103;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;transform:translateY(100%);transition:transform .4s ease;font-family:'Segoe UI',sans-serif;">
+  <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;"><span style="font-size:18px;">🎓</span><div><div style="color:#fff;font-size:13px;font-weight:700;">Makedonya'da okumak ister misin?</div><div style="color:rgba(255,255,255,.55);font-size:11px;">Türkçe, ücretsiz danışmanlık</div></div></div>
+  <div style="display:flex;gap:8px;flex-shrink:0;">
+    <a href="femons_programlar.html" style="background:rgba(255,255,255,.1);color:#fff;text-decoration:none;font-size:12px;font-weight:600;padding:8px 14px;border-radius:6px;white-space:nowrap;">Programlar</a>
+    <a href="https://wa.me/905465288580" target="_blank" style="background:#25D366;color:#fff;text-decoration:none;font-size:12px;font-weight:700;padding:8px 14px;border-radius:6px;white-space:nowrap;">WhatsApp</a>
+    <button onclick="document.getElementById('stickyBar').style.transform='translateY(100%)'" style="background:rgba(255,255,255,.08);border:none;color:rgba(255,255,255,.5);cursor:pointer;padding:8px 10px;border-radius:6px;font-size:16px;">✕</button>
+  </div>
+</div>
+<script>
+(function(){var bar=document.getElementById('stickyBar');var shown=false;window.addEventListener('scroll',function(){if(!shown&&window.scrollY>400){shown=true;bar.style.transform='translateY(0)';var waf=document.querySelector('.wa-float');if(waf)waf.style.bottom='76px';}});})();
+</script>
+<!-- / STICKY BAR -->
 </body>
 </html>
