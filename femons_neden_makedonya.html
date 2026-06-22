@@ -310,6 +310,109 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   z-index:3!important;
 }
 
+
+/* MACEDONIA CITY SLIDER V13 */
+.city-slider{
+  position:relative;
+  height:520px;
+  overflow:hidden;
+  background:#001621;
+}
+.city-slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity .7s ease;
+  background-size:cover;
+  background-position:center;
+}
+.city-slide.active{opacity:1}
+.city-slide:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(0,22,33,.82),rgba(0,22,33,.42),rgba(0,22,33,.08));
+}
+.city-slide-content{
+  position:relative;
+  z-index:2;
+  height:100%;
+  display:flex;
+  align-items:center;
+}
+.city-panel{
+  max-width:620px;
+  background:rgba(0,22,33,.58);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:24px;
+  padding:34px;
+  color:#fff;
+  backdrop-filter:blur(8px);
+  box-shadow:0 24px 70px rgba(0,0,0,.25);
+}
+.city-panel .kicker-small{
+  color:#ffb59b;
+  letter-spacing:1.1px;
+  font-size:12px;
+  font-weight:900;
+  margin-bottom:12px;
+}
+.city-panel h2{
+  font-size:42px;
+  line-height:1.08;
+  letter-spacing:-1px;
+  margin-bottom:16px;
+}
+.city-panel p{
+  color:rgba(255,255,255,.82);
+  font-size:18px;
+  max-width:520px;
+}
+.slider-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:4;
+  width:48px;
+  height:48px;
+  border:0;
+  border-radius:50%;
+  background:rgba(255,255,255,.95);
+  color:#001621;
+  font-size:26px;
+  cursor:pointer;
+  box-shadow:0 10px 30px rgba(0,0,0,.22);
+}
+.slider-arrow.prev{left:24px}
+.slider-arrow.next{right:24px}
+.slider-dots{
+  position:absolute;
+  z-index:5;
+  left:50%;
+  bottom:24px;
+  transform:translateX(-50%);
+  display:flex;
+  gap:9px;
+}
+.slider-dots button{
+  width:10px;
+  height:10px;
+  border:0;
+  border-radius:50%;
+  background:rgba(255,255,255,.65);
+  cursor:pointer;
+}
+.slider-dots button.active{background:#FF4103;width:28px;border-radius:999px}
+@media(max-width:760px){
+  .city-slider{height:520px}
+  .city-panel{padding:24px;margin:0 18px}
+  .city-panel h2{font-size:32px}
+  .city-panel p{font-size:16px}
+  .slider-arrow{width:40px;height:40px;font-size:22px}
+  .slider-arrow.prev{left:12px}
+  .slider-arrow.next{right:12px}
+}
+
 </style>
 </head>
 <body>
@@ -324,6 +427,54 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </nav>
 <a class="whatsapp-float" aria-label="WhatsApp ile kayıt talebi gönder" href="https://wa.me/905465288580"></a>
+
+
+<section class="city-slider" id="makedonya-sehirleri">
+  <div class="city-slide active" style="background-image:url('https://images.unsplash.com/photo-1604079628040-94301bb21b91?auto=format&fit=crop&w=1800&q=80')">
+    <div class="container city-slide-content">
+      <div class="city-panel">
+        <div class="kicker-small">ÜSKÜP</div>
+        <h2>Tarih, kültür ve modern yaşam bir arada.</h2>
+        <p>Başkent Üsküp; ulaşım, sosyal yaşam ve üniversite seçenekleriyle öğrenciler için en çok araştırılan şehirlerden biridir.</p>
+      </div>
+    </div>
+  </div>
+  <div class="city-slide" style="background-image:url('https://images.unsplash.com/photo-1596394723269-b2cbca4e6313?auto=format&fit=crop&w=1800&q=80')">
+    <div class="container city-slide-content">
+      <div class="city-panel">
+        <div class="kicker-small">OHRİ</div>
+        <h2>Göl manzarasıyla sakin öğrenci hayatı.</h2>
+        <p>Ohri; doğal güzelliği, sakin atmosferi ve teknoloji odaklı üniversite seçenekleriyle öne çıkar.</p>
+      </div>
+    </div>
+  </div>
+  <div class="city-slide" style="background-image:url('https://images.unsplash.com/photo-1566837497312-7be4b29ee0de?auto=format&fit=crop&w=1800&q=80')">
+    <div class="container city-slide-content">
+      <div class="city-panel">
+        <div class="kicker-small">GOSTİVAR</div>
+        <h2>Öğrenciler için daha sakin ve uyumlu şehir hayatı.</h2>
+        <p>Gostivar, Türkiye’den gelen öğrencilerin kültürel uyum açısından değerlendirdiği şehirlerden biridir.</p>
+      </div>
+    </div>
+  </div>
+  <div class="city-slide" style="background-image:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1800&q=80')">
+    <div class="container city-slide-content">
+      <div class="city-panel">
+        <div class="kicker-small">TETOVA VE BALKAN ŞEHİRLERİ</div>
+        <h2>Yakın kültür, ulaşılabilir yaşam ve öğrenci dostu çevre.</h2>
+        <p>Makedonya’da şehir seçimi; bölüm, üniversite ve öğrencinin yaşam beklentisine göre birlikte değerlendirilmelidir.</p>
+      </div>
+    </div>
+  </div>
+  <button class="slider-arrow prev" type="button" onclick="moveCitySlide(-1)">‹</button>
+  <button class="slider-arrow next" type="button" onclick="moveCitySlide(1)">›</button>
+  <div class="slider-dots">
+    <button type="button" class="active" onclick="setCitySlide(0)"></button>
+    <button type="button" onclick="setCitySlide(1)"></button>
+    <button type="button" onclick="setCitySlide(2)"></button>
+    <button type="button" onclick="setCitySlide(3)"></button>
+  </div>
+</section>
 
 <header class="hero">
   <div class="container hero-grid">
@@ -422,5 +573,21 @@ function toggleMenu(){
   if(menu){menu.classList.toggle('open');}
 }
 </script>
+
+<script>
+let citySlideIndex = 0;
+function showCitySlide(i){
+  const slides = document.querySelectorAll('.city-slide');
+  const dots = document.querySelectorAll('.slider-dots button');
+  if(!slides.length) return;
+  citySlideIndex = (i + slides.length) % slides.length;
+  slides.forEach((s,idx)=>s.classList.toggle('active', idx===citySlideIndex));
+  dots.forEach((d,idx)=>d.classList.toggle('active', idx===citySlideIndex));
+}
+function moveCitySlide(step){ showCitySlide(citySlideIndex + step); }
+function setCitySlide(i){ showCitySlide(i); }
+setInterval(()=>moveCitySlide(1), 5500);
+</script>
+
 </body>
 </html>
