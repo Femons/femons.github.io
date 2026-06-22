@@ -300,6 +300,36 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   .menu .cta-mini{margin-left:0!important;text-align:center!important}
 }
 
+
+/* DROPDOWN CLICK FIX V10 */
+.dropdown{position:relative!important}
+.dropdown:after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:100%;
+  height:12px;
+}
+.dropdown-menu{
+  top:100%!important;
+  margin-top:0!important;
+  pointer-events:auto!important;
+}
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu{
+  display:grid!important;
+  gap:4px!important;
+}
+.drop-btn{
+  position:relative!important;
+  z-index:2!important;
+}
+.dropdown-menu a{
+  position:relative!important;
+  z-index:3!important;
+}
+
 </style>
 </head>
 <body>
@@ -319,7 +349,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   <div class="container hero-grid">
     <div>
       <div class="kicker">ÜNİVERSİTE PROGRAMLARI</div>
-      <h1>Uluslararası Vizyon Üniversitesi programları ve ücretleri</h1>
+      <h1>Uluslararası Vizyon Üniversitesi bölümleri ve ücretleri</h1>
       <p>Uluslararası Vizyon Üniversitesi için Hukuk, Mimarlık, Psikoloji, Bilgisayar Mühendisliği ve Hemşirelik programlarını Femons ile incele.</p>
       <div class="btns">
         <a class="btn btn-orange" href="femons_iletisim.html">Kayıt Talebi Gönder</a>
@@ -358,12 +388,12 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
 </section>
 <section class="section alt" id="programlar">
   <div class="container">
-    <h2>Programlar ve ücretler</h2>
-    <p class="lead">Hazırlık sınıfı ücretleri dahil edilmeden, sadece bölüm/fakülte ücreti ve eğitim dili gösterilmiştir.</p>
+    <h2>Bölümler ve ücretler</h2>
+    <p class="lead">Sadece lisans bölümleri gösterilmiştir. Lisans tamamlama programları bu alana eklenmemiştir.</p>
     <div class="program-photo-grid">
       
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Türkçe / İngilizce</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=80')"><span class="program-badge">Türkçe / İngilizce</span></div>
   <div class="program-body">
     <h3>Hukuk</h3>
     <div class="program-meta">
@@ -374,7 +404,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Türkçe / İngilizce</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=80')"><span class="program-badge">Türkçe / İngilizce</span></div>
   <div class="program-body">
     <h3>Mimarlık</h3>
     <div class="program-meta">
@@ -385,7 +415,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Türkçe / İngilizce</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80')"><span class="program-badge">Türkçe / İngilizce</span></div>
   <div class="program-body">
     <h3>İnşaat Mühendisliği</h3>
     <div class="program-meta">
@@ -396,7 +426,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Türkçe / İngilizce</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=900&q=80')"><span class="program-badge">Türkçe / İngilizce</span></div>
   <div class="program-body">
     <h3>Psikoloji</h3>
     <div class="program-meta">
@@ -407,7 +437,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Türkçe / İngilizce</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80')"><span class="program-badge">Türkçe / İngilizce</span></div>
   <div class="program-body">
     <h3>Bilgisayar Mühendisliği</h3>
     <div class="program-meta">
@@ -418,7 +448,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Türkçe / İngilizce</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80')"><span class="program-badge">Türkçe / İngilizce</span></div>
   <div class="program-body">
     <h3>Hemşirelik</h3>
     <div class="program-meta">
