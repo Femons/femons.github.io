@@ -6,30 +6,6 @@
 <title>UIST Üniversitesi | Femons Education</title>
 <meta name="description" content="UIST Üniversitesi">
 <style>
-/* === NAV CSS === */
-.container{max-width:1180px;margin:0 auto;padding:0 24px}
-nav{position:sticky;top:0;z-index:1000;background:rgba(0,22,33,.98);box-shadow:0 2px 18px rgba(0,0,0,.28)}
-.nav-inner{height:74px;display:flex;align-items:center;gap:18px}
-.logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:900;margin-right:auto;text-decoration:none}
-.logo-mark{width:40px;height:40px;background:var(--orange);border-radius:11px;display:grid;place-items:center;font-weight:900;font-size:18px;color:#fff}
-.logo span{color:var(--orange)}
-.menu{display:flex;align-items:center;gap:3px;flex:1;justify-content:flex-end;white-space:nowrap}
-.menu a{color:rgba(255,255,255,.72);font-size:13px;font-weight:650;padding:8px 8px;border-radius:9px;text-decoration:none;line-height:1}
-.menu a:hover,.menu a.active{background:rgba(255,255,255,.1);color:#fff}
-.menu .cta-mini{background:var(--orange);color:#fff;padding:11px 14px;margin-left:4px}
-.menu .cta-mini:hover{background:#e03800}
-.nav-phone{color:#fff;font-weight:800;opacity:.9;padding-left:10px;font-size:13px;text-decoration:none;white-space:nowrap}
-.mobile-toggle{display:none;background:var(--orange);color:#fff;border:0;border-radius:9px;padding:10px 14px;font-weight:900;cursor:pointer;margin-left:auto;font-size:14px}
-@media(max-width:960px){
-  .nav-phone{display:none}
-  .mobile-toggle{display:block}
-  .menu{display:none;position:absolute;top:74px;left:0;right:0;background:#001621;padding:14px 18px;flex-direction:column;align-items:stretch;white-space:normal;box-shadow:0 18px 35px rgba(0,0,0,.25);z-index:999}
-  .menu.open{display:flex}
-  .menu a{font-size:15px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.06)}
-  .menu .cta-mini{margin-left:0;text-align:center}
-  .container{padding:0 18px}
-}
-/* === / NAV CSS === */
 :root{
   --dark:#001621;
   --dark2:#00243A;
@@ -238,9 +214,9 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
 <body>
 <nav>
   <div class="container nav-inner">
-    <a class="logo" href="index.html"><div class="logo-mark">F</div><div>Femons <span>Eğitim</span></div></a>
+    <a class="logo" href="index.html"><div class="logo-mark">F</div><div>Femons <span>Education</span></div></a>
     <button class="mobile-toggle" onclick="toggleMenu()">Menü</button>
-    <div class="menu"><a class="" href="index.html">Ana Sayfa</a><a class="" href="femons_hakkimizda.html">Hakkımızda</a><a class="" href="femons_neden_makedonya.html">Neden Makedonya?</a><a class="active" href="femons_programlar.html">Programlar</a><a class="" href="femons_basvuru_sureci.html">Başvuru Süreci</a><a class="" href="femons_sss.html">SSS</a><a class="" href="blog.html">Blog</a><a class="cta-mini" href="femons_iletisim.html">Kayıt Talebi</a><a class="nav-phone" href="tel:+905465288580">+90 546 528 85 80</a></div>
+    <div class="menu"><a class=" " href="index.html">Ana Sayfa</a><a class=" " href="femons_hakkimizda.html">Hakkımızda</a><a class=" " href="femons_neden_makedonya.html">Neden Makedonya?</a><a class="active " href="femons_programlar.html">Programlar</a><a class=" " href="femons_basvuru_sureci.html">Başvuru Süreci</a><a class=" " href="femons_sss.html">SSS</a><a class=" " href="blog.html">Blog</a><a class=" cta-mini" href="femons_iletisim.html">Kayıt Talebi</a><a class="nav-phone" href="tel:+905465288580">+90 546 528 85 80</a></div>
   </div>
 </nav>
 
@@ -281,21 +257,6 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
     </div>
     </div></section><section class="section"><div class="container"><div class="cta-band"><div><h2>Bu bölüm sana uygun mu?</h2><p>Ücretsiz ön görüşmede birlikte değerlendirelim.</p></div><a class="btn btn-orange" href="femons_iletisim.html">Bilgi Al</a></div></div></section></main>
 <a class="whatsapp-float" aria-label="WhatsApp ile kayıt talebi gönder" href="https://wa.me/905465288580"></a>
-
-<!-- RABBIT HOLE -->
-<section style="padding:48px 24px;background:#f4f6f8;border-top:1px solid #e2e8ed;">
-  <div style="max-width:1160px;margin:0 auto;">
-    <div style="font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#FF4103;margin-bottom:10px;">Bunları da İncele</div>
-    <h2 style="font-size:clamp(18px,2.5vw,26px);font-weight:800;margin-bottom:24px;color:#001621;">Merak ettiğin diğer konular</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
-<a href="makedonya-bilgisayar-muhendisligi.html" style="background:#fff;border:1px solid #e2e8ed;border-radius:12px;padding:16px 18px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:.2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,22,33,.1)';this.style.borderColor='#FF4103'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e2e8ed'"><span style="font-size:22px;flex-shrink:0;">💻</span><div><div style="font-size:14px;font-weight:700;color:#001621;">Bilgisayar Müh.</div><div style="font-size:11px;color:#6b7a8a;margin-top:2px;">Keşfet →</div></div></a>
-<a href="goce-delcev-universitesi.html" style="background:#fff;border:1px solid #e2e8ed;border-radius:12px;padding:16px 18px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:.2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,22,33,.1)';this.style.borderColor='#FF4103'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e2e8ed'"><span style="font-size:22px;flex-shrink:0;">🔬</span><div><div style="font-size:14px;font-weight:700;color:#001621;">Goce Delcev</div><div style="font-size:11px;color:#6b7a8a;margin-top:2px;">Keşfet →</div></div></a>
-<a href="makedonya-yasam-maliyetleri.html" style="background:#fff;border:1px solid #e2e8ed;border-radius:12px;padding:16px 18px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:.2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,22,33,.1)';this.style.borderColor='#FF4103'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e2e8ed'"><span style="font-size:22px;flex-shrink:0;">💰</span><div><div style="font-size:14px;font-weight:700;color:#001621;">Yaşam Maliyetleri</div><div style="font-size:11px;color:#6b7a8a;margin-top:2px;">Keşfet →</div></div></a>
-<a href="blog.html" style="background:#fff;border:1px solid #e2e8ed;border-radius:12px;padding:16px 18px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:.2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,22,33,.1)';this.style.borderColor='#FF4103'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e2e8ed'"><span style="font-size:22px;flex-shrink:0;">📝</span><div><div style="font-size:14px;font-weight:700;color:#001621;">Blog</div><div style="font-size:11px;color:#6b7a8a;margin-top:2px;">Keşfet →</div></div></a>
-    </div>
-  </div>
-</section>
-<!-- / RABBIT HOLE -->
 <footer>
   <div class="container footer-grid">
     <div><b>Femons Education</b><p>YKS şartı olmadan Makedonya’da üniversite başvurusu için Türkçe danışmanlık.</p></div>
@@ -309,22 +270,7 @@ function toggleMenu(){
   var menu=document.querySelector('.menu');
   if(menu){menu.classList.toggle('open');}
 }
-}
 </script>
 
-
-<!-- STICKY BAR -->
-<div id="stickyBar" style="position:fixed;bottom:0;left:0;right:0;z-index:9997;background:#001621;border-top:2px solid #FF4103;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;transform:translateY(100%);transition:transform .4s ease;font-family:'Segoe UI',sans-serif;">
-  <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;"><span style="font-size:18px;">🎓</span><div><div style="color:#fff;font-size:13px;font-weight:700;">Makedonya'da okumak ister misin?</div><div style="color:rgba(255,255,255,.55);font-size:11px;">Türkçe, ücretsiz danışmanlık</div></div></div>
-  <div style="display:flex;gap:8px;flex-shrink:0;">
-    <a href="femons_programlar.html" style="background:rgba(255,255,255,.1);color:#fff;text-decoration:none;font-size:12px;font-weight:600;padding:8px 14px;border-radius:6px;white-space:nowrap;">Programlar</a>
-    <a href="https://wa.me/905465288580" target="_blank" style="background:#25D366;color:#fff;text-decoration:none;font-size:12px;font-weight:700;padding:8px 14px;border-radius:6px;white-space:nowrap;">WhatsApp</a>
-    <button onclick="document.getElementById('stickyBar').style.transform='translateY(100%)'" style="background:rgba(255,255,255,.08);border:none;color:rgba(255,255,255,.5);cursor:pointer;padding:8px 10px;border-radius:6px;font-size:16px;">✕</button>
-  </div>
-</div>
-<script>
-(function(){var bar=document.getElementById('stickyBar');var shown=false;window.addEventListener('scroll',function(){if(!shown&&window.scrollY>400){shown=true;bar.style.transform='translateY(0)';var waf=document.querySelector('.wa-float');if(waf)waf.style.bottom='76px';}});})();
-</script>
-<!-- / STICKY BAR -->
 </body>
 </html>

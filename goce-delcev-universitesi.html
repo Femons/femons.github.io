@@ -3,33 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Goce Delcev Üniversitesi | Makedonya Üniversiteleri | Femons</title>
-<meta name="description" content="Goce Delcev Üniversitesi hakkında bilgi, program seçenekleri ve Makedonya üniversite başvuru süreci için Femons danışmanlığı.">
+<title>Goce Delcev Üniversitesi Programları ve Ücretleri | Femons</title>
+<meta name="description" content="Goce Delcev Üniversitesi bölüm ücretleri, eğitim dili ve Makedonya üniversite başvuru süreci.">
 <style>
-/* === NAV CSS === */
-.container{max-width:1180px;margin:0 auto;padding:0 24px}
-nav{position:sticky;top:0;z-index:1000;background:rgba(0,22,33,.98);box-shadow:0 2px 18px rgba(0,0,0,.28)}
-.nav-inner{height:74px;display:flex;align-items:center;gap:18px}
-.logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:900;margin-right:auto;text-decoration:none}
-.logo-mark{width:40px;height:40px;background:var(--orange);border-radius:11px;display:grid;place-items:center;font-weight:900;font-size:18px;color:#fff}
-.logo span{color:var(--orange)}
-.menu{display:flex;align-items:center;gap:3px;flex:1;justify-content:flex-end;white-space:nowrap}
-.menu a{color:rgba(255,255,255,.72);font-size:13px;font-weight:650;padding:8px 8px;border-radius:9px;text-decoration:none;line-height:1}
-.menu a:hover,.menu a.active{background:rgba(255,255,255,.1);color:#fff}
-.menu .cta-mini{background:var(--orange);color:#fff;padding:11px 14px;margin-left:4px}
-.menu .cta-mini:hover{background:#e03800}
-.nav-phone{color:#fff;font-weight:800;opacity:.9;padding-left:10px;font-size:13px;text-decoration:none;white-space:nowrap}
-.mobile-toggle{display:none;background:var(--orange);color:#fff;border:0;border-radius:9px;padding:10px 14px;font-weight:900;cursor:pointer;margin-left:auto;font-size:14px}
-@media(max-width:960px){
-  .nav-phone{display:none}
-  .mobile-toggle{display:block}
-  .menu{display:none;position:absolute;top:74px;left:0;right:0;background:#001621;padding:14px 18px;flex-direction:column;align-items:stretch;white-space:normal;box-shadow:0 18px 35px rgba(0,0,0,.25);z-index:999}
-  .menu.open{display:flex}
-  .menu a{font-size:15px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.06)}
-  .menu .cta-mini{margin-left:0;text-align:center}
-  .container{padding:0 18px}
-}
-/* === / NAV CSS === */
 :root{
   --dark:#001621;
   --dark2:#00243A;
@@ -233,26 +209,47 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   .whatsapp-float:after{display:none!important}
 }
 
+
+
+/* UNIVERSITY PROGRAM CARDS V8 */
+.program-photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+.program-photo-card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 16px 42px rgba(0,22,33,.07);transition:.22s ease}
+.program-photo-card:hover{transform:translateY(-4px);box-shadow:0 22px 52px rgba(0,22,33,.12)}
+.program-img{height:168px;background-size:cover;background-position:center;position:relative}
+.program-img:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,22,33,.08),rgba(0,22,33,.62))}
+.program-badge{position:absolute;left:14px;bottom:14px;z-index:2;background:var(--orange);color:#fff;font-size:12px;font-weight:900;padding:7px 10px;border-radius:999px}
+.program-body{padding:22px}
+.program-body h3{font-size:22px;margin-bottom:14px}
+.program-meta{display:grid;gap:10px}
+.program-meta div{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid #edf2f5;padding-bottom:8px;color:var(--muted);font-size:14px}
+.program-meta div:last-child{border-bottom:0}
+.program-meta b{color:var(--dark);text-align:right}
+.program-note{margin-top:22px;color:var(--muted);font-size:14px;background:#fff7f4;border:1px solid #ffd8ca;padding:14px 16px;border-radius:14px}
+.quick-info{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
+.quick-info .card{padding:20px}
+@media(max-width:980px){.program-photo-grid{grid-template-columns:repeat(2,1fr)}.quick-info{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.program-photo-grid{grid-template-columns:1fr}.quick-info{grid-template-columns:1fr}.program-img{height:150px}}
 </style>
 </head>
 <body>
 <nav>
   <div class="container nav-inner">
-    <a class="logo" href="index.html"><div class="logo-mark">F</div><div>Femons <span>Eğitim</span></div></a>
+    <a class="logo" href="index.html"><div class="logo-mark">F</div><div>Femons <span>Education</span></div></a>
     <button class="mobile-toggle" onclick="toggleMenu()">Menü</button>
-    <div class="menu"><a class="" href="index.html">Ana Sayfa</a><a class="" href="femons_hakkimizda.html">Hakkımızda</a><a class="" href="femons_neden_makedonya.html">Neden Makedonya?</a><a class="active" href="femons_programlar.html">Programlar</a><a class="" href="femons_basvuru_sureci.html">Başvuru Süreci</a><a class="" href="femons_sss.html">SSS</a><a class="" href="blog.html">Blog</a><a class="cta-mini" href="femons_iletisim.html">Kayıt Talebi</a><a class="nav-phone" href="tel:+905465288580">+90 546 528 85 80</a></div>
+    <div class="menu"><a class="" href="index.html">Ana Sayfa</a><a class="" href="femons_hakkimizda.html">Hakkımızda</a><a class="" href="femons_neden_makedonya.html">Neden Makedonya?</a><a class="active" href="femons_programlar.html">Programlar</a><a class="" href="femons_basvuru_sureci.html">Başvuru Süreci</a><a class="" href="femons_sss.html">SSS</a><a class="" href="blog.html">Blog</a><a class=" cta-mini" href="femons_iletisim.html">Kayıt Talebi</a><a class="nav-phone" href="tel:+905465288580">+90 546 528 85 80</a></div>
   </div>
 </nav>
+<a class="whatsapp-float" aria-label="WhatsApp ile kayıt talebi gönder" href="https://wa.me/905465288580"></a>
 
 <header class="hero">
   <div class="container hero-grid">
     <div>
-      <div class="kicker">ÜNİVERSİTE REHBERİ</div>
-      <h1>Goce Delcev Üniversitesi başvuru ve program rehberi</h1>
-      <p>İştip merkezli Goce Delcev Üniversitesi için başvuru, bölüm seçimi ve kayıt sürecini Femons ile planlayabilirsin.</p>
+      <div class="kicker">ÜNİVERSİTE PROGRAMLARI</div>
+      <h1>Goce Delcev Üniversitesi programları ve ücretleri</h1>
+      <p>Goce Delcev Üniversitesi için Tıp, Hukuk, Bilgisayar Mühendisliği ve diğer programların eğitim dili ve fakülte ücretlerini Femons ile karşılaştır.</p>
       <div class="btns">
         <a class="btn btn-orange" href="femons_iletisim.html">Kayıt Talebi Gönder</a>
-        <a class="btn btn-outline" href="femons_programlar.html">Programları İncele</a>
+        <a class="btn btn-outline" href="#programlar">Programları Gör</a>
       </div>
       <div class="stats">
         <div class="stat"><b>7</b><span>Üniversite</span></div>
@@ -261,93 +258,426 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
       </div>
     </div>
     <div class="hero-card">
-      <h2>Üniversite seçimini doğru yap</h2>
-      <p>Her üniversitenin program, şehir, başvuru ve öğrenci profili farklıdır. Femons ile sana uygun seçeneği birlikte belirleyelim.</p>
+      <h2>Goce Delcev Üniversitesi program kartları</h2>
+      <p>Bölüm, eğitim dili ve fakülte ücretlerini tek ekranda karşılaştır.</p>
       <div class="checks">
-        <div class="check">YKS şartı olmadan başvuru seçenekleri</div>
-        <div class="check">Üniversite ve bölüm bazlı yönlendirme</div>
-        <div class="check">Evrak ve kayıt süreci takibi</div>
+        <div class="check">Bölüm ve ücret bilgileri kartlı sistem</div>
+        <div class="check">Eğitim dili ve fakülte ücreti görünür</div>
+        <div class="check">Başvuru süreci için Femons danışmanlığı</div>
       </div>
-      <a class="btn btn-orange" href="femons_iletisim.html">Danışmanlık Al</a>
+      <a class="btn btn-orange" href="femons_iletisim.html">WhatsApp’tan Bilgi Al</a>
     </div>
   </div>
 </header>
-
 <main>
 <section class="section">
   <div class="container">
-    <h2>Goce Delcev Üniversitesi hakkında</h2>
-    <p class="lead">Makedonya’da devlet üniversitesi seçenekleri arasında yer alan Goce Delcev Üniversitesi, farklı fakülte ve program alternatifleriyle öne çıkar.</p>
-    <div class="grid3">
+    <h2>Goce Delcev Üniversitesi hızlı bilgiler</h2>
+    <p class="lead">Goce Delcev Üniversitesi için bölüm, eğitim dili ve fakülte ücretleri kartlı sistemle sunulmuştur.</p>
+    <div class="quick-info">
       <div class="card"><h3>Şehir</h3><p>İştip</p></div>
-      <div class="card"><h3>Kimler için uygun?</h3><p>Makedonya’da üniversite okumak isteyen, bölüm ve şehir seçimini danışmanlıkla yapmak isteyen öğrenciler için değerlendirilebilir.</p></div>
-      <div class="card"><h3>Başvuru desteği</h3><p>Femons; evrak kontrolü, üniversite yönlendirmesi ve kayıt süreci takibinde destek sağlar.</p></div>
+      <div class="card"><h3>Üniversite</h3><p>Goce Delcev Üniversitesi</p></div>
+      <div class="card"><h3>Danışmanlık</h3><p>Femons Education</p></div>
+      <div class="card"><h3>Başvuru</h3><p>Kayıt talebi ile ön görüşme</p></div>
+    </div>
+  </div>
+</section>
+<section class="section alt" id="programlar">
+  <div class="container">
+    <h2>Programlar ve ücretler</h2>
+    <p class="lead">Hazırlık sınıfı ücretleri dahil edilmeden, sadece bölüm/fakülte ücreti ve eğitim dili gösterilmiştir.</p>
+    <div class="program-photo-grid">
+      
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">İngilizce</span></div>
+  <div class="program-body">
+    <h3>Tıp</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>İngilizce</b></div>
+      <div><span>Fakülte Ücreti</span><b>6000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">İngilizce</span></div>
+  <div class="program-body">
+    <h3>Hukuk</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>İngilizce</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">İngilizce</span></div>
+  <div class="program-body">
+    <h3>Bilgisayar Mühendisliği</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>İngilizce</b></div>
+      <div><span>Fakülte Ücreti</span><b>2000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Tıp</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1500 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Diş Hekimliği</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1500 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Eczacılık</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1500 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Tıbbi Laboratuvar Teşhisi Asistanlığı</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Hemşire ve Teknisyen Yetiştirme Programı</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Fizyoterapist Yetiştirme Programı</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Optometri ve Göz Optik Programı</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Diş Teknisyenliği ve Protez Uzmanlığı</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Ekonomi Fakültesi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Gazetecilik ve Halkla İlişkiler</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Kamu Yönetimi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Mekanik Fakültesi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Madencilik Enstitüsü Fakültesi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Matematik, Biyoloji ve Kimya Programları</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Turizm ve Lojistik Fakültesi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Gastroloji Fakültesi Bölümleri</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Etno Müzikoloji ve Halk Çalgıları</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Teknoloji Fakültesi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Tekstil Tasarımı ve Yönetimi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Ziraat Fakültesi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Doğa Fakültesi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Enformatik Fakültesi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Teknoloji ve Teknik Bilimleri Fakültesi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Müzik Fakültesi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Elektrik Fakültesi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Doğal ve Teknik Bilimler Fakültesi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Filoloji Fakültesi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>İktisat Fakültesi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Bilişim Fakültesi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>1000 €</b></div>
+    </div>
+  </div>
+</div>
+<div class="program-photo-card">
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-body">
+    <h3>Bilgisayar Mühendisliği Fakültesi</h3>
+    <div class="program-meta">
+      
+      <div><span>Eğitim Dili</span><b>Makedonca</b></div>
+      <div><span>Fakülte Ücreti</span><b>2000 €</b></div>
+    </div>
+  </div>
+</div><p class="program-note">Ücretler Goce Delcev fiyat listesinde yer alan fakülte ücretleri esas alınarak hazırlanmıştır. Hazırlık sınıfı ücretleri bu kartlara dahil edilmemiştir.</p>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h2>Başvuru süreci</h2>
+    <div class="steps">
+      <div class="step"><h3>Ön Görüşme</h3><p>Hedef bölüm, bütçe ve şehir beklentisi değerlendirilir.</p></div>
+      <div class="step"><h3>Program Seçimi</h3><p>Bölüm, eğitim dili ve ücretler karşılaştırılır.</p></div>
+      <div class="step"><h3>Evrak Kontrolü</h3><p>Diploma, transkript ve pasaport belgeleri hazırlanır.</p></div>
+      <div class="step"><h3>Kayıt Takibi</h3><p>Başvuru ve kayıt adımları Femons tarafından takip edilir.</p></div>
     </div>
   </div>
 </section>
 <section class="section alt">
   <div class="container">
-    <h2>Bu üniversite için SEO başlıkları</h2>
-    <p class="lead">Goce Delcev Üniversitesi, Makedonya devlet üniversitesi, İştip üniversite</p>
-    <div class="grid3">
-      <div class="card"><h3>Program seçimi</h3><p>Öğrencinin hedeflediği bölüm, akademik beklenti ve kariyer planına göre programlar incelenir.</p></div>
-      <div class="card"><h3>Başvuru belgeleri</h3><p>Diploma, transkript, pasaport ve gerekli evraklar başvuruya uygun hale getirilir.</p></div>
-      <div class="card"><h3>Denklik ve tanınırlık</h3><p>Diploma ve denklik konuları üniversite, bölüm ve güncel kriterler üzerinden ayrıca değerlendirilmelidir.</p></div>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container">
-    <div class="cta-band"><div><h2>Goce Delcev Üniversitesi için bilgi al.</h2><p>Başvuru koşulları ve bölüm seçeneklerini birlikte değerlendirelim.</p></div><a class="btn btn-orange" href="femons_iletisim.html">Kayıt Talebi Gönder</a></div>
+    <div class="cta-band"><div><h2>Goce Delcev Üniversitesi için kayıt talebi oluştur.</h2><p>Bölüm seçimi ve başvuru sürecini birlikte planlayalım.</p></div><a class="btn btn-orange" href="femons_iletisim.html">Kayıt Talebi Gönder</a></div>
   </div>
 </section>
 </main>
-
-<a class="whatsapp-float" aria-label="WhatsApp ile kayıt talebi gönder" href="https://wa.me/905465288580"></a>
-
-<!-- RABBIT HOLE -->
-<section style="padding:48px 24px;background:#f4f6f8;border-top:1px solid #e2e8ed;">
-  <div style="max-width:1160px;margin:0 auto;">
-    <div style="font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#FF4103;margin-bottom:10px;">Bunları da İncele</div>
-    <h2 style="font-size:clamp(18px,2.5vw,26px);font-weight:800;margin-bottom:24px;color:#001621;">Merak ettiğin diğer konular</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
-<a href="makedonya-tip-fakultesi.html" style="background:#fff;border:1px solid #e2e8ed;border-radius:12px;padding:16px 18px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:.2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,22,33,.1)';this.style.borderColor='#FF4103'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e2e8ed'"><span style="font-size:22px;flex-shrink:0;">🏥</span><div><div style="font-size:14px;font-weight:700;color:#001621;">Tıp Fakültesi</div><div style="font-size:11px;color:#6b7a8a;margin-top:2px;">Keşfet →</div></div></a>
-<a href="makedonya-dis-hekimligi.html" style="background:#fff;border:1px solid #e2e8ed;border-radius:12px;padding:16px 18px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:.2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,22,33,.1)';this.style.borderColor='#FF4103'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e2e8ed'"><span style="font-size:22px;flex-shrink:0;">🦷</span><div><div style="font-size:14px;font-weight:700;color:#001621;">Diş Hekimliği</div><div style="font-size:11px;color:#6b7a8a;margin-top:2px;">Keşfet →</div></div></a>
-<a href="blog-vizyon-vs-goce-delcev.html" style="background:#fff;border:1px solid #e2e8ed;border-radius:12px;padding:16px 18px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:.2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,22,33,.1)';this.style.borderColor='#FF4103'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e2e8ed'"><span style="font-size:22px;flex-shrink:0;">⚖️</span><div><div style="font-size:14px;font-weight:700;color:#001621;">Vizyon vs Goce</div><div style="font-size:11px;color:#6b7a8a;margin-top:2px;">Keşfet →</div></div></a>
-<a href="makedonya-yasam-maliyetleri.html" style="background:#fff;border:1px solid #e2e8ed;border-radius:12px;padding:16px 18px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:.2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,22,33,.1)';this.style.borderColor='#FF4103'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e2e8ed'"><span style="font-size:22px;flex-shrink:0;">💰</span><div><div style="font-size:14px;font-weight:700;color:#001621;">Yaşam Maliyetleri</div><div style="font-size:11px;color:#6b7a8a;margin-top:2px;">Keşfet →</div></div></a>
-    </div>
-  </div>
-</section>
-<!-- / RABBIT HOLE -->
 <footer>
   <div class="container footer-grid">
     <div><b>Femons Education</b><p>YKS şartı olmadan Makedonya’da üniversite başvurusu için Türkçe danışmanlık.</p></div>
-    <div><b>Sayfalar</b><a href="universiteler.html">Üniversiteler</a><a href="femons_programlar.html">Programlar</a><a href="blog.html">Blog</a><a href="femons_iletisim.html">İletişim</a></div>
+    <div><b>Sayfalar</b><a href="femons_hakkimizda.html">Hakkımızda</a><a href="femons_neden_makedonya.html">Neden Makedonya?</a><a href="femons_programlar.html">Programlar</a><a href="femons_sss.html">SSS</a><a href="blog.html">Blog</a></div>
     <div><b>İletişim</b><a href="tel:+905465288580">+90 546 528 85 80</a><a href="mailto:info@femons.com.tr">info@femons.com.tr</a><a href="https://www.femons.com.tr">www.femons.com.tr</a></div>
   </div>
 </footer>
-
-<script>
-function toggleMenu(){
-  var menu=document.querySelector('.menu');
-  if(menu){menu.classList.toggle('open');}
-}
-}
-</script>
-
-
-<!-- STICKY BAR -->
-<div id="stickyBar" style="position:fixed;bottom:0;left:0;right:0;z-index:9997;background:#001621;border-top:2px solid #FF4103;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;transform:translateY(100%);transition:transform .4s ease;font-family:'Segoe UI',sans-serif;">
-  <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;"><span style="font-size:18px;">🎓</span><div><div style="color:#fff;font-size:13px;font-weight:700;">Makedonya'da okumak ister misin?</div><div style="color:rgba(255,255,255,.55);font-size:11px;">Türkçe, ücretsiz danışmanlık</div></div></div>
-  <div style="display:flex;gap:8px;flex-shrink:0;">
-    <a href="femons_programlar.html" style="background:rgba(255,255,255,.1);color:#fff;text-decoration:none;font-size:12px;font-weight:600;padding:8px 14px;border-radius:6px;white-space:nowrap;">Programlar</a>
-    <a href="https://wa.me/905465288580" target="_blank" style="background:#25D366;color:#fff;text-decoration:none;font-size:12px;font-weight:700;padding:8px 14px;border-radius:6px;white-space:nowrap;">WhatsApp</a>
-    <button onclick="document.getElementById('stickyBar').style.transform='translateY(100%)'" style="background:rgba(255,255,255,.08);border:none;color:rgba(255,255,255,.5);cursor:pointer;padding:8px 10px;border-radius:6px;font-size:16px;">✕</button>
-  </div>
-</div>
-<script>
-(function(){var bar=document.getElementById('stickyBar');var shown=false;window.addEventListener('scroll',function(){if(!shown&&window.scrollY>400){shown=true;bar.style.transform='translateY(0)';var waf=document.querySelector('.wa-float');if(waf)waf.style.bottom='76px';}});})();
-</script>
-<!-- / STICKY BAR -->
+<script>function toggleMenu(){var menu=document.querySelector('.menu');if(menu){menu.classList.toggle('open');}}</script>
 </body>
 </html>
