@@ -84,76 +84,6 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
 
 
 
-/* NAV FINAL V6 */
-.nav-inner{
-  height:70px!important;
-  gap:12px!important;
-  max-width:1320px!important;
-}
-.logo{
-  min-width:max-content!important;
-  margin-right:14px!important;
-}
-.menu{
-  display:flex!important;
-  align-items:center!important;
-  gap:3px!important;
-  flex:1!important;
-  justify-content:flex-end!important;
-  white-space:nowrap!important;
-}
-.menu a{
-  font-size:13px!important;
-  padding:8px 8px!important;
-  line-height:1!important;
-}
-.menu .cta-mini{
-  background:var(--orange)!important;
-  color:#fff!important;
-  padding:11px 14px!important;
-  margin-left:4px!important;
-}
-.nav-phone{
-  color:#fff!important;
-  font-weight:800!important;
-  opacity:.9!important;
-  padding-left:10px!important;
-}
-.mobile-toggle{
-  display:none!important;
-  background:var(--orange)!important;
-  color:#fff!important;
-  border:0!important;
-  border-radius:9px!important;
-  padding:10px 12px!important;
-  font-weight:900!important;
-}
-@media(max-width:1160px){
-  .menu a{font-size:12px!important;padding:8px 6px!important}
-  .logo div:last-child{font-size:14px!important}
-  .nav-phone{display:none!important}
-}
-@media(max-width:900px){
-  .mobile-toggle{display:block!important;margin-left:auto!important}
-  .menu{
-    display:none!important;
-    position:absolute!important;
-    top:70px!important;
-    left:0!important;
-    right:0!important;
-    background:#001621!important;
-    padding:14px 18px!important;
-    flex-direction:column!important;
-    align-items:stretch!important;
-    white-space:normal!important;
-    box-shadow:0 18px 35px rgba(0,0,0,.25)!important;
-  }
-  .menu.open{display:flex!important}
-  .menu a{font-size:15px!important;padding:14px 16px!important;border-bottom:1px solid rgba(255,255,255,.06)!important}
-  .menu .cta-mini{margin-left:0!important;text-align:center!important}
-}
-
-
 /* WHATSAPP ICON FLOAT V6 */
 .whatsapp-float{
   position:fixed!important;
@@ -229,6 +159,147 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
 .quick-info .card{padding:20px}
 @media(max-width:980px){.program-photo-grid{grid-template-columns:repeat(2,1fr)}.quick-info{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.program-photo-grid{grid-template-columns:1fr}.quick-info{grid-template-columns:1fr}.program-img{height:150px}}
+
+/* DROPDOWN NAV V9 */
+.nav-inner{
+  height:70px!important;
+  gap:12px!important;
+  max-width:1320px!important;
+}
+.logo{
+  min-width:max-content!important;
+  margin-right:14px!important;
+}
+.menu{
+  display:flex!important;
+  align-items:center!important;
+  gap:3px!important;
+  flex:1!important;
+  justify-content:flex-end!important;
+  white-space:nowrap!important;
+}
+.menu a,.drop-btn{
+  color:rgba(255,255,255,.72)!important;
+  font-size:13px!important;
+  font-weight:650!important;
+  padding:8px 8px!important;
+  line-height:1!important;
+  border-radius:9px!important;
+}
+.menu a:hover,.menu a.active,.dropdown:hover .drop-btn{
+  background:rgba(255,255,255,.1)!important;
+  color:#fff!important;
+}
+.drop-btn{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:6px!important;
+  cursor:pointer!important;
+}
+.drop-btn:after{
+  content:"▾";
+  font-size:11px;
+  opacity:.75;
+}
+.dropdown{
+  position:relative!important;
+}
+.dropdown-menu{
+  display:none!important;
+  position:absolute!important;
+  top:34px!important;
+  left:0!important;
+  min-width:285px!important;
+  background:#fff!important;
+  border:1px solid #e6edf2!important;
+  border-radius:16px!important;
+  padding:10px!important;
+  box-shadow:0 22px 55px rgba(0,22,33,.22)!important;
+  z-index:99999!important;
+}
+.dropdown:hover .dropdown-menu{
+  display:grid!important;
+  gap:4px!important;
+}
+.dropdown-menu a{
+  color:#001621!important;
+  display:block!important;
+  padding:12px 14px!important;
+  font-size:14px!important;
+  border-radius:11px!important;
+  line-height:1.25!important;
+  white-space:normal!important;
+}
+.dropdown-menu a:hover{
+  background:#f4f6f8!important;
+  color:#FF4103!important;
+}
+.menu .cta-mini{
+  background:var(--orange)!important;
+  color:#fff!important;
+  padding:11px 14px!important;
+  margin-left:4px!important;
+}
+.nav-phone{
+  color:#fff!important;
+  font-weight:800!important;
+  opacity:.9!important;
+  padding-left:10px!important;
+}
+.mobile-toggle{
+  display:none!important;
+  background:var(--orange)!important;
+  color:#fff!important;
+  border:0!important;
+  border-radius:9px!important;
+  padding:10px 12px!important;
+  font-weight:900!important;
+}
+@media(max-width:1160px){
+  .menu a,.drop-btn{font-size:12px!important;padding:8px 6px!important}
+  .logo div:last-child{font-size:14px!important}
+  .nav-phone{display:none!important}
+}
+@media(max-width:900px){
+  .mobile-toggle{display:block!important;margin-left:auto!important}
+  .menu{
+    display:none!important;
+    position:absolute!important;
+    top:70px!important;
+    left:0!important;
+    right:0!important;
+    background:#001621!important;
+    padding:14px 18px!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    white-space:normal!important;
+    box-shadow:0 18px 35px rgba(0,0,0,.25)!important;
+  }
+  .menu.open{display:flex!important}
+  .menu a,.drop-btn{font-size:15px!important;padding:14px 16px!important;border-bottom:1px solid rgba(255,255,255,.06)!important}
+  .dropdown-menu{
+    display:grid!important;
+    position:static!important;
+    min-width:0!important;
+    background:rgba(255,255,255,.06)!important;
+    border:0!important;
+    box-shadow:none!important;
+    margin:0 0 8px 0!important;
+    border-radius:12px!important;
+  }
+  .dropdown-menu a{
+    color:rgba(255,255,255,.85)!important;
+    font-size:14px!important;
+    border-bottom:0!important;
+    padding:11px 18px!important;
+  }
+  .dropdown-menu a:hover{
+    background:rgba(255,255,255,.08)!important;
+    color:#fff!important;
+  }
+  .menu .cta-mini{margin-left:0!important;text-align:center!important}
+}
+
 </style>
 </head>
 <body>
@@ -236,7 +307,10 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   <div class="container nav-inner">
     <a class="logo" href="index.html"><div class="logo-mark">F</div><div>Femons <span>Education</span></div></a>
     <button class="mobile-toggle" onclick="toggleMenu()">Menü</button>
-    <div class="menu"><a class="" href="index.html">Ana Sayfa</a><a class="" href="femons_hakkimizda.html">Hakkımızda</a><a class="" href="femons_neden_makedonya.html">Neden Makedonya?</a><a class="active" href="femons_programlar.html">Programlar</a><a class="" href="femons_basvuru_sureci.html">Başvuru Süreci</a><a class="" href="femons_sss.html">SSS</a><a class="" href="blog.html">Blog</a><a class=" cta-mini" href="femons_iletisim.html">Kayıt Talebi</a><a class="nav-phone" href="tel:+905465288580">+90 546 528 85 80</a></div>
+    <div class="menu"><a class="" href="index.html">Ana Sayfa</a><a class="" href="femons_hakkimizda.html">Hakkımızda</a><a class="" href="femons_neden_makedonya.html">Neden Makedonya?</a><div class="dropdown">
+      <a class="drop-btn active" href="universiteler.html">Üniversiteler</a>
+      <div class="dropdown-menu"><a href="uluslararasi-vizyon-universitesi.html">Uluslararası Vizyon Üniversitesi</a><a href="goce-delcev-universitesi.html">Goce Delcev Üniversitesi</a><a href="kiril-metodi-universitesi.html">Kiril Metodi Üniversitesi</a><a href="guneydogu-avrupa-universitesi.html">Güneydoğu Avrupa Üniversitesi</a><a href="st-apostle-universitesi.html">St. Apostle Üniversitesi</a><a href="amerikan-universitesi-makedonya.html">Amerikan Üniversitesi</a><a href="balkan-universitesi-makedonya.html">Balkan Üniversitesi</a></div>
+    </div><a class="" href="femons_basvuru_sureci.html">Başvuru Süreci</a><a class="" href="femons_sss.html">SSS</a><a class="" href="blog.html">Blog</a><a class="cta-mini" href="femons_iletisim.html">Kayıt Talebi</a><a class="nav-phone" href="tel:+905465288580">+90 546 528 85 80</a></div>
   </div>
 </nav>
 <a class="whatsapp-float" aria-label="WhatsApp ile kayıt talebi gönder" href="https://wa.me/905465288580"></a>
@@ -289,7 +363,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
     <div class="program-photo-grid">
       
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">İngilizce</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">İngilizce</span></div>
   <div class="program-body">
     <h3>Tıp</h3>
     <div class="program-meta">
@@ -300,7 +374,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">İngilizce</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">İngilizce</span></div>
   <div class="program-body">
     <h3>Hukuk</h3>
     <div class="program-meta">
@@ -311,7 +385,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">İngilizce</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">İngilizce</span></div>
   <div class="program-body">
     <h3>Bilgisayar Mühendisliği</h3>
     <div class="program-meta">
@@ -322,7 +396,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Tıp</h3>
     <div class="program-meta">
@@ -333,7 +407,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Diş Hekimliği</h3>
     <div class="program-meta">
@@ -344,7 +418,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Eczacılık</h3>
     <div class="program-meta">
@@ -355,7 +429,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1579154341098-e4e158cc7f55?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Tıbbi Laboratuvar Teşhisi Asistanlığı</h3>
     <div class="program-meta">
@@ -366,7 +440,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Hemşire ve Teknisyen Yetiştirme Programı</h3>
     <div class="program-meta">
@@ -377,7 +451,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Fizyoterapist Yetiştirme Programı</h3>
     <div class="program-meta">
@@ -388,7 +462,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Optometri ve Göz Optik Programı</h3>
     <div class="program-meta">
@@ -399,7 +473,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Diş Teknisyenliği ve Protez Uzmanlığı</h3>
     <div class="program-meta">
@@ -410,7 +484,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Ekonomi Fakültesi</h3>
     <div class="program-meta">
@@ -421,7 +495,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Gazetecilik ve Halkla İlişkiler</h3>
     <div class="program-meta">
@@ -432,7 +506,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Kamu Yönetimi</h3>
     <div class="program-meta">
@@ -443,7 +517,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1581091215367-59ab6b6d2056?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Mekanik Fakültesi</h3>
     <div class="program-meta">
@@ -454,7 +528,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Madencilik Enstitüsü Fakültesi</h3>
     <div class="program-meta">
@@ -465,7 +539,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Matematik, Biyoloji ve Kimya Programları</h3>
     <div class="program-meta">
@@ -476,7 +550,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Turizm ve Lojistik Fakültesi</h3>
     <div class="program-meta">
@@ -487,7 +561,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Gastroloji Fakültesi Bölümleri</h3>
     <div class="program-meta">
@@ -498,7 +572,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Etno Müzikoloji ve Halk Çalgıları</h3>
     <div class="program-meta">
@@ -509,7 +583,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Teknoloji Fakültesi</h3>
     <div class="program-meta">
@@ -520,7 +594,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Tekstil Tasarımı ve Yönetimi</h3>
     <div class="program-meta">
@@ -531,7 +605,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Ziraat Fakültesi</h3>
     <div class="program-meta">
@@ -542,7 +616,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Doğa Fakültesi</h3>
     <div class="program-meta">
@@ -553,7 +627,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Enformatik Fakültesi</h3>
     <div class="program-meta">
@@ -564,7 +638,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Teknoloji ve Teknik Bilimleri Fakültesi</h3>
     <div class="program-meta">
@@ -575,7 +649,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Müzik Fakültesi</h3>
     <div class="program-meta">
@@ -586,7 +660,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Elektrik Fakültesi</h3>
     <div class="program-meta">
@@ -597,7 +671,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Doğal ve Teknik Bilimler Fakültesi</h3>
     <div class="program-meta">
@@ -608,7 +682,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Filoloji Fakültesi</h3>
     <div class="program-meta">
@@ -630,7 +704,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Bilişim Fakültesi</h3>
     <div class="program-meta">
@@ -641,7 +715,7 @@ footer b{color:#fff}footer a{display:block;margin-top:8px;color:rgba(255,255,255
   </div>
 </div>
 <div class="program-photo-card">
-  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
+  <div class="program-img" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=75')"><span class="program-badge">Makedonca</span></div>
   <div class="program-body">
     <h3>Bilgisayar Mühendisliği Fakültesi</h3>
     <div class="program-meta">
